@@ -1,6 +1,7 @@
 package dominio;
 
 import java.util.ArrayList;
+import java.lang.StringBuilder;
 
 public class Catalogo{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
