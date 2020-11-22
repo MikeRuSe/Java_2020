@@ -4,10 +4,19 @@ import java.util.ArrayList;
 
 public class Libreta{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
-	
+	//private int linea_valor_modificar = catalogo.indexOf("Valor a modificar");
+
 	public void annadirTelefono(Telefono telefono){
 		coleccionTelefonos.add(telefono);
 	}
+
+	public void eliminarTelefono(int index){
+		coleccionTelefonos.remove(index);
+	}
+
+	public void modificarTelefono(Telefono telefono, int index){
+        coleccionTelefonos.set(index, telefono);
+    }
 
 	public String toString(){
 		StringBuilder datos = new StringBuilder();
