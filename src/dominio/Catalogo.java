@@ -11,11 +11,13 @@ public class Catalogo{
 		coleccionTelefonos.add(telefono);
 	}
 
-	public void eliminarTelefono(int index){
+	public void eliminarTelefono(String argumentos){
+		int index = coleccionTelefonos.indexOf(argumentos);
 		coleccionTelefonos.remove(index);
 	}
 
-	public void modificarTelefono(Telefono telefono, int index){
+	public void modificarTelefono(Telefono telefono, String argumentos){
+        int index = coleccionTelefonos.indexOf(argumentos);
         coleccionTelefonos.set(index, telefono);
     }
 
