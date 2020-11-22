@@ -13,7 +13,7 @@ public class Telefono{
 		descuentoTelefono = "";
 	}
 
-	public Telefono(String modeloTelefono, String marcaTelefono, int precioTelefono, int descuentoTelefono){
+	public Telefono(String modeloTelefono, String marcaTelefono, String precioTelefono, String descuentoTelefono){
 		this.modeloTelefono = modeloTelefono;
 		this.marcaTelefono = marcaTelefono;
 		this.precioTelefono = precioTelefono;
