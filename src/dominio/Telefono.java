@@ -1,36 +1,56 @@
 package dominio;
 
-public class Contacto{
-	private String nombre;
-	private String numeroDeTelefono;
+public class Telefono{
+	private String modeloTelefono;
+	private String marcaTelefono;
+	private int precioTelefono; 
+	private int descuentoTelefono;
 
-	public Contacto(){
-		nombre = "";
-		numeroDeTelefono = "";
+	public Telefono(){
+		modeloTelefono = "";
+		marcaTelefono = "";
+		precioTelefono = "";
+		descuentoTelefono = "";
 	}
 
-	public Contacto(String nombre, String nTel){
-		this.nombre = nombre;
-		this.numeroDeTelefono = nTel;
+	public Telefono(String modeloTelefono, String marcaTelefono, int precioTelefono, int descuentoTelefono){
+		this.modeloTelefono = modeloTelefono;
+		this.marcaTelefono = marcaTelefono;
+		this.precioTelefono = precioTelefono;
+		this.descuentoTelefono = descuentoTelefono;
 	}
 
-	public String getNombre(){
-		return nombre;
+	public String getModeloTelefono(){
+		return modeloTelefono;
 	}
 
-	public void setNombre(String nombre){
-		this.nombre = nombre;
+	public void setModeloTelefono(String modeloTelefono){
+		this.modeloTelefono = modeloTelefono;
 	}
 
-	public String getNumeroDeTelefono(){
-		return numeroDeTelefono;
+	public String getMarcalotelefono(){
+		return marcaTelefono;
 	}
 
-	public void setNumeroDeTelefono(String nTel){
-		this.numeroDeTelefono = nTel;
+	public void setMarcaTelefono(String marcaTelefono){
+		this.marcaTelefono = marcaTelefono;
+	}
+	public int getPrecioTelefono(){
+		return precioTelefono; 
+	}
+	public void int setPrecioTelefono(int precioTelefono){
+		this.precioTelefono = precioTelefono;
+	}
+	public int getDescuentoTelefono(){
+		return descuentoTelefono; 
+	}
+	public void int setDescuentoTelefono(int descuentoTelefono){
+		this.descuentoTelefono = descuentoTelefono; 
 	}
 
 	public String toString(){
-		return nombre + " " + numeroDeTelefono + "\n";
+		return marcaTelefono + " " + modeloTelefono + " " +
+		       precioTelefono + " " + descuentoTelefono + 
+	       	        " " + "\n";
 	}
 }
