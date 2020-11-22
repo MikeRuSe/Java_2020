@@ -14,7 +14,7 @@ public class Interfaz{
 		String[] args = input.split(" ");
 		Catalogo catalogo = inicializarCatalogo(NOMBRE_FICHERO);
 		if(args[0].equals("help")){
-			System.out.println(HELP_TEXT);
+			System.out.println(HELP);
 		} else if (args[0].equals("list")){
 			if(catalogo.toString().equals("")){
 				System.out.println("No hay ningún telefono en el catalogo");
@@ -29,7 +29,7 @@ public class Interfaz{
 		else if (args[0].equals("modify")){
 			int index = catalogo.indexOf(args[1]);
 			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
-			catalogo.modificarTelefono(index, telefono);
+			catalogo.modificarTelefono(telefono, index);
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("remove")){
