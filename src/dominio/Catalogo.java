@@ -21,7 +21,7 @@ public class Catalogo{
 
 	public String toString(){
 		StringBuilder datos = new StringBuilder();
-		for (ColeccionTelefono telefonos : coleccionTelefonos){
+		for (Telefono telefono : coleccionTelefonos){
 			datos.append(telefono);
 		}
 		return datos.toString();
