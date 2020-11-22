@@ -38,13 +38,13 @@ public class Telefono{
 	public int getPrecioTelefono(){
 		return precioTelefono; 
 	}
-	public void int setPrecioTelefono(int precioTelefono){
+	public void setPrecioTelefono(int precioTelefono){
 		this.precioTelefono = precioTelefono;
 	}
 	public int getDescuentoTelefono(){
 		return descuentoTelefono; 
 	}
-	public void int setDescuentoTelefono(int descuentoTelefono){
+	public void setDescuentoTelefono(int descuentoTelefono){
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
