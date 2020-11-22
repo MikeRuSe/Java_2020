@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.FileWriter;
+import java.util.ArrayList;
 
 public class Interfaz{
 	private static String HELP = "Texto de ayuda";
@@ -27,14 +28,16 @@ public class Interfaz{
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("modify")){
+			String argumentos = args[1];
 			//int index = catalogo.coleccionTelefonos.indexOf(args[1]);
-			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
-			catalogo.modificarTelefono(telefono, args[1]);
+			Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
+			catalogo.modificarTelefono(telefono, argumentos);
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("remove")){
+			String argumentos = args[1];
 			//int index = catalogo.indexOf(args[1]);
-			catalogo.eliminarTelefono(args[1]);
+			catalogo.eliminarTelefono(argumentos);
 			inicializarFichero(catalogo);
 		}
 	}
