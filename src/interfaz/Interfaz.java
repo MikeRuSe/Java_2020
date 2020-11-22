@@ -27,14 +27,14 @@ public class Interfaz{
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("modify")){
-			int index = catalogo.indexOf(args[1]);
+			//int index = catalogo.coleccionTelefonos.indexOf(args[1]);
 			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
-			catalogo.modificarTelefono(telefono, index);
+			catalogo.modificarTelefono(telefono, args[1]);
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("remove")){
-			int index = catalogo.indexOf(args[1]);
-			catalogo.eliminarTelefono(index);
+			//int index = catalogo.indexOf(args[1]);
+			catalogo.eliminarTelefono(args[1]);
 			inicializarFichero(catalogo);
 		}
 	}
