@@ -3,8 +3,8 @@ package dominio;
 public class Telefono{
 	private String modeloTelefono;
 	private String marcaTelefono;
-	private int precioTelefono; 
-	private int descuentoTelefono;
+	private String precioTelefono; 
+	private String descuentoTelefono;
 
 	public Telefono(){
 		modeloTelefono = "";
@@ -35,16 +35,16 @@ public class Telefono{
 	public void setMarcaTelefono(String marcaTelefono){
 		this.marcaTelefono = marcaTelefono;
 	}
-	public int getPrecioTelefono(){
+	public String getPrecioTelefono(){
 		return precioTelefono; 
 	}
-	public void setPrecioTelefono(int precioTelefono){
+	public void setPrecioTelefono(String precioTelefono){
 		this.precioTelefono = precioTelefono;
 	}
-	public int getDescuentoTelefono(){
+	public String getDescuentoTelefono(){
 		return descuentoTelefono; 
 	}
-	public void setDescuentoTelefono(int descuentoTelefono){
+	public void setDescuentoTelefono(String descuentoTelefono){
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
