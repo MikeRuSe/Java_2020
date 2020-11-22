@@ -2,7 +2,7 @@ package dominio;
 
 import java.util.ArrayList;
 
-public class Libreta{
+public class Catalogo{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
 	//private int linea_valor_modificar = catalogo.indexOf("Valor a modificar");
 
