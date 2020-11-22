@@ -22,7 +22,7 @@ public class Interfaz{
 				System.out.println(catalogo);
 			}
 		} else if (args[0].equals("add")){
-			Telefono telefono = new Telefono(args[1], args[2]);
+			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
 			catalogo.annadirTelefono(telefono);
 			inicializarFichero(catalogo);
 		}
