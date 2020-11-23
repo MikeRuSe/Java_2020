@@ -30,8 +30,10 @@ public class Interfaz{
 		else if (args[0].equals("modify")){
 			String argumentos = args[1];
 			//int index = catalogo.coleccionTelefonos.indexOf(args[1]);
-			Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
+			Telefono telefono = new Telefono(args[3], args[2], args[4], args[5]);
+			System.out.println("1 " + catalogo.toString());
 			catalogo.modificarTelefono(telefono, argumentos);
+			System.out.println("2 " + catalogo.toString());
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("remove")){

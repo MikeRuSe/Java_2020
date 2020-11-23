@@ -49,8 +49,6 @@ public class Telefono{
 	}
 
 	public String toString(){
-		return marcaTelefono + " " + modeloTelefono + " " +
-		       precioTelefono + " " + descuentoTelefono + 
-	       	        " " + "\n";
+		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + "\n";
 	}
 }

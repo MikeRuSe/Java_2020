@@ -1,5 +1,6 @@
 package dominio;
 
+import dominio.Telefono;
 import java.util.ArrayList;
 import java.lang.StringBuilder;
 
@@ -7,21 +8,33 @@ public class Catalogo{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
 	//private int linea_valor_modificar = catalogo.indexOf("Valor a modificar");
 
-	public void annadirTelefono(Telefono telefono){
+	public void annadirTelefono(Telefono telefono) {
 		coleccionTelefonos.add(telefono);
 	}
 
-	public void eliminarTelefono(String argumentos){
-		int index = coleccionTelefonos.indexOf(argumentos);
-		coleccionTelefonos.remove(index);
+	public void eliminarTelefono(String argumentos) {
+		for(int i = 0 ; i < coleccionTelefonos.size(); i++) {
+        	Telefono nuevo_telefono = coleccionTelefonos.get(i);
+        	if(argumentos.equals(nuevo_telefono.getModeloTelefono()))  {
+        		//System.out.println(argumentos);
+        		//System.out.println(index);
+        		coleccionTelefonos.remove(i);
+        	}
+    	}
 	}
 
-	public void modificarTelefono(Telefono telefono, String argumentos){
-        int index = coleccionTelefonos.indexOf(argumentos);
-        coleccionTelefonos.set(index, telefono);
+	public void modificarTelefono(Telefono telefono, String argumentos) {
+		for(int i = 0 ; i < coleccionTelefonos.size(); i++) {
+        	Telefono nuevo_telefono = coleccionTelefonos.get(i);
+        	if(argumentos.equals(nuevo_telefono.getModeloTelefono()))  {
+        		//System.out.println(argumentos);
+        		//System.out.println(index);
+        		coleccionTelefonos.set(i, telefono);
+        	}
+    	}
     }
 
-	public String toString(){
+	public String toString() {
 		StringBuilder datos = new StringBuilder();
 		for (Telefono telefono : coleccionTelefonos){
 			datos.append(telefono);
