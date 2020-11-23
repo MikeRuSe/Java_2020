@@ -1,0 +1,2 @@
+Modelo, Marca, Precio, Descuento 
+Gato, Perro, 111, 000 
