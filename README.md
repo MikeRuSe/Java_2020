@@ -1,21 +1,19 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# Proyecto 1: gestor de catálogo de productos o servicios
 
-### What is this repository for? ###
+## Descripción
+Programa que permite el alta, baja y modificación de productos (en este caso dispositivos móviles).
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+## Requisitos 
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+1. Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS).
+> sudo apt-get update  
+> sudo apt install default-jre
+3. Git  2.28.0 instalado
+> sudo apt-get update  
+> sudo apt-get install git -y
 
 ### Contribution guidelines ###
 
