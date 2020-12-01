@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 
 /**
-
+ *
  * Esta clase interpreta los datos que el usuario introduce en Principal.java
  *
  * @author: Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
