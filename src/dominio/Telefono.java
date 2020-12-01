@@ -8,6 +8,17 @@ public class Telefono{
 	private String precioTelefono; 
 	private String descuentoTelefono;
 	private String precioFinalString;
+	
+	/**
+	 * Este metodo sirve para crear un telefono vacio
+	 */
+
+	public Telefono(){
+		modeloTelefono = "";
+		marcaTelefono = "";
+		precioTelefono = "";
+		descuentoTelefono = "";
+	}
 
 	/**
 	 * Este es un metodo constructor de 5 parametros con las caracteristicas de del telefono
@@ -89,13 +100,19 @@ public class Telefono{
 	}
 
 	/**
-	 * Cambia aplica el descuento del telefono
+	 * Aplica el descuento del telefono
 	 * @param descuentoTelefono aplica el descuento
 	 */
 
 	public void setDescuentoTelefono(String descuentoTelefono){
 		this.descuentoTelefono = descuentoTelefono; 
 	}
+
+	/**
+	 * Este metodo calcula el precio total del telefono y lo devuelde con el descuento aplicado en el caso de que lo tenga
+	 * @return precio final del telefono sin descuento
+	 * @return precio final del telefono con descuento
+	 */
 
 	public Double precioTotal(String precioTelefono, String descuentoTelefono){
 		if (descuentoTelefono == null || descuentoTelefono.isEmpty()) {
@@ -120,9 +137,6 @@ public class Telefono{
 	public String toString(){
 		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioTotal(precioTelefono, descuentoTelefono) + "\n";
 	}
-<<<<<<< HEAD
+
 }
 
-=======
-}
->>>>>>> 97c0e002a576ed42859a612359315ce7e59170e1
