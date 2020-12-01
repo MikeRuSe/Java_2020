@@ -7,21 +7,56 @@ Programa que permite el alta, baja y modificación de productos (en este caso di
 
 
 ## Requisitos 
+##### Sistema operativo Linux (Debian / Ubuntu / CentOS) #####
+##### Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS). #####
+```BASH
+sudo apt-get update  
+sudo apt install default-jre
+```
+##### Git  2.28.0 instalado #####
+```BASH
+sudo apt-get update  
+sudo apt-get install git -y
+```
+##### Realizar un git clone del repositorio: #####
+```BASH
+git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
+```
+##### Ubicarnos en la carpeta del programa: #####
+```BASH
+cd final-project
+```
+##### Instalar make:#####
+```BASH
+sudo apt-get install build-essential
+```
+##### Compilar el programa con: #####
+```BASH
+make compilar
+```
+### Diagrama del programa ###
+![https://bitbucket.org/MigueLitros/final-project/src/master/img/Umbrello.jpeg](https://i.gyazo.com/f2919e6e99b4fd80ba9a31d2eec9175b.png)
+### Instrucciones de uso ###
+#### Añadir teléfonos ####
+```BASH
+java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento>
+```
+#### Listar teléfonos ####
+```BASH
+java -cp bin aplicacion.Principal list
+```
+#### Modificar teléfonos ####
+```BASH
+java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>
+```
+#### Borrar teléfonos ####
+```BASH
+java -cp bin aplicacion.Principal remove <Modelo_borrar>
+```
 
-1. Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS).
-> sudo apt-get update  
-> sudo apt install default-jre
-3. Git  2.28.0 instalado
-> sudo apt-get update  
-> sudo apt-get install git -y
+### Desarrolladores ###
 
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Jorge Martin-Benito Garcia
+* Xavier Alexander Mora Peraza
+* Dulibeth Medina Chirinos
+* Miguel Rubio Semelas
