@@ -1,3 +1,4 @@
+Galaxy_S10 Samsung 850 13 
 Iphone_SE_1 Apple 799 5 
 Iphone_10 Apple 1099 15 
 Galaxy_T6 Samsung 150 7 
@@ -10,4 +11,4 @@ Galaxy_J5 Samsung 550 9
 Galaxy_K10 Samsung 750 13 
 Iphone_SE Apple 499 12 
 Iphone_11_PLUS Apple 799 15 
-Galaxy_S10 Samsung 870 13 
+

@@ -35,39 +35,51 @@ public class Interfaz{
 	public static void procesado(String input){
 		String[] args = input.split(" ");
 		Catalogo catalogo = inicializarCatalogo(NOMBRE_FICHERO);
-		if(args[0].equals("help")){
-			System.out.println(HELP);
-		} else if (args[0].equals("list")){
-			if(catalogo.toString().equals("")){
-				System.out.println("No hay ningún telefono en el catalogo");
-			} else {
-				System.out.println(catalogo);
+		if (args.length < 1) {
+			System.err.println("NO HAY SUFICIENTES PARAMETROS");
+			System.exit(128);
+		} else {
+			if(args[0].equals("help")){
+				System.out.println(HELP);
+			} else if (args[0].equals("list")){
+				if(catalogo.toString().equals("")){
+					System.out.println("No hay ningún telefono en el catalogo");
+				} else {
+					System.out.println(catalogo);
+				}
+			} else if (args[0].equals("add")){
+				if (args.length < 5) {
+					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.exit(128);
+				} else {
+				Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
+				catalogo.annadirTelefono(telefono);
+				inicializarFichero(catalogo);
+				}
 			}
-		} else if (args[0].equals("add")){
-			if (args.length < 5) {
-				System.err.println("NO HAY SUFICIENTES PARAMETROS");
-				System.exit(128);
+			else if (args[0].equals("modify")){
+				if (args.length < 6) {
+					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.exit(128);
+				} else {
+				String argumentos = args[1];
+				Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
+				System.out.println("Datos sin actualizar: \n" + catalogo.toString());
+				catalogo.modificarTelefono(telefono, argumentos);
+				System.out.println("Datos actualizados: \n" + catalogo.toString());
+				inicializarFichero(catalogo);
+				}
 			}
-			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
-			catalogo.annadirTelefono(telefono);
-			inicializarFichero(catalogo);
-		}
-		else if (args[0].equals("modify")){
-			if (args.length < 6) {
-				System.err.println("NO HAY SUFICIENTES PARAMETROS");
-				System.exit(128);
+			else if (args[0].equals("remove")){
+				if (args.length < 2) {
+					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.exit(128);
+				} else {
+				String argumentos = args[1];
+				catalogo.eliminarTelefono(argumentos);
+				inicializarFichero(catalogo);
+				}
 			}
-			String argumentos = args[1];
-			Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
-			System.out.println("Datos sin actualizar: \n" + catalogo.toString());
-			catalogo.modificarTelefono(telefono, argumentos);
-			System.out.println("Datos actualizados: \n" + catalogo.toString());
-			inicializarFichero(catalogo);
-		}
-		else if (args[0].equals("remove")){
-			String argumentos = args[1];
-			catalogo.eliminarTelefono(argumentos);
-			inicializarFichero(catalogo);
 		}
 	}
 

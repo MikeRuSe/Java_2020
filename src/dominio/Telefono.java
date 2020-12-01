@@ -15,6 +15,15 @@ public class Telefono{
 		descuentoTelefono = "";
 	}
 
+	/**
+	 * Este es un metodo constructor de 5 parametros con las caracteristicas de del telefono
+	 * @param modeloTelefono modelo del telefono
+	 * @param marcaTelefono marca del telefono 
+	 * @param precioTelefono precio del telefono
+	 * @param descuentoTelefono descuento del telefono 
+	 * @param precioFinalString precio final del telefono
+	 */
+
 	public Telefono(String modeloTelefono, String marcaTelefono, String precioTelefono, String descuentoTelefono){
 		this.modeloTelefono = modeloTelefono;
 		this.marcaTelefono = marcaTelefono;
@@ -22,30 +31,74 @@ public class Telefono{
 		this.descuentoTelefono = descuentoTelefono;
 	}
 
+	/**
+	 * Devuelve el modelo del telefono
+	 * @return modelo del telefono
+	 */
+
 	public String getModeloTelefono(){
 		return modeloTelefono;
 	}
+	
+	/**
+	 * Cambia el modelo del telefono
+	 * @param modeloTelefono nuevo modelo del telefono 
+	 */
 
 	public void setModeloTelefono(String modeloTelefono){
 		this.modeloTelefono = modeloTelefono;
 	}
 
-	public String getMarcalotelefono(){
+	/**
+	 * Devuelve la marca del telefono
+	 * @return marca del telefono
+	 */
+
+	public String getMarcaTelefono(){
 		return marcaTelefono;
 	}
+	
+	/**
+	 * Cambia la marca del telefono
+	 * @param marcaTelefono nueva marca del telefono 
+	 */
 
 	public void setMarcaTelefono(String marcaTelefono){
 		this.marcaTelefono = marcaTelefono;
 	}
+
+	/**
+	 * Devuelve el precio del telefono
+	 * @return precio del telefono
+	 */
+
 	public String getPrecioTelefono(){
 		return precioTelefono; 
 	}
+	
+	/**
+	 * Cambia precio del telefono
+	 * @param precioTelefono nuevo precio del telefono
+	 */
+
 	public void setPrecioTelefono(String precioTelefono){
 		this.precioTelefono = precioTelefono;
 	}
+
+	/**
+	 * Devuelve el descuento del telefono
+	 * @return descuento del telefono
+	 */
+
 	public String getDescuentoTelefono(){
 		return descuentoTelefono; 
 	}
+
+	/**
+	 * Aplica el descuento del telefono
+	 * @param descuentoTelefono aplica el descuento
+	 */
+
 	public void setDescuentoTelefono(String descuentoTelefono){
 		this.descuentoTelefono = descuentoTelefono; 
 	}
@@ -64,8 +117,15 @@ public class Telefono{
 		}
 		return (double)Math.round(precioTelefonoDouble *(100 - descuentoTelefonoDouble))/100;
 	}
+	
+	/**
+	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono
+	 * @return todas las caracteristicas
+	 */
 
 	public String toString(){
 		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioFinal(precioTelefono, descuentoTelefono) + "\n";
 	}
+
 }
+
