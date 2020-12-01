@@ -83,7 +83,7 @@ public class Interfaz{
 
 	/**
 	 *
-	 * Este método devuelve los datos del catálogo de móviles
+	 * Este método devuelve los Telefonos del catálogo de móviles
 	 *
 	 * @return catalogo de móviles
 	 *
@@ -101,6 +101,7 @@ public class Interfaz{
 				String descuentoTelefono = sc.next();
 				Telefono telefono = new Telefono(modeloTelefono, marcaTelefono, precioTelefono, descuentoTelefono);
 				catalogo.annadirTelefono(telefono);
+				//telefono.precioTotal(precioTelefono, descuentoTelefono);
 			}
 			sc.close();
 		} catch (FileNotFoundException e){

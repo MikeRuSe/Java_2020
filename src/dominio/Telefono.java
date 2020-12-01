@@ -5,6 +5,7 @@ public class Telefono{
 	private String marcaTelefono;
 	private String precioTelefono; 
 	private String descuentoTelefono;
+	private String precioFinalString;
 
 	public Telefono(){
 		modeloTelefono = "";
@@ -48,7 +49,27 @@ public class Telefono{
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
+	public String precioTotal(String precioTelefono, String descuentoTelefono){
+		int precioTelefonoInt = 1000;
+		int descuentoTelefonoInt = 15;
+		try {
+   			precioTelefonoInt = Integer.parseInt(precioTelefono);
+			}
+		catch (NumberFormatException e) {
+   			precioTelefonoInt = 0;
+		}
+		try {
+   			descuentoTelefonoInt = Integer.parseInt(descuentoTelefono);
+			}	
+		catch (NumberFormatException e) {
+   			descuentoTelefonoInt = 0;
+		}
+		int precioFinal = (precioTelefonoInt * ((100 - descuentoTelefonoInt)/100));
+		precioFinalString = String.valueOf(precioFinal);
+		return precioFinalString;
+	}
+
 	public String toString(){
-		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + "\n";
+		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " /* + precioTotal(precioTelefono, descuentoTelefono) */ + "\n";
 	}
 }
