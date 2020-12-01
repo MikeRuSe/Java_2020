@@ -44,11 +44,19 @@ public class Interfaz{
 				System.out.println(catalogo);
 			}
 		} else if (args[0].equals("add")){
+			if (args.length < 5) {
+				System.err.println("NO HAY SUFICIENTES PARAMETROS");
+				System.exit(128);
+			}
 			Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
 			catalogo.annadirTelefono(telefono);
 			inicializarFichero(catalogo);
 		}
 		else if (args[0].equals("modify")){
+			if (args.length < 6) {
+				System.err.println("NO HAY SUFICIENTES PARAMETROS");
+				System.exit(128);
+			}
 			String argumentos = args[1];
 			Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
 			System.out.println("Datos sin actualizar: \n" + catalogo.toString());
@@ -101,7 +109,6 @@ public class Interfaz{
 				String descuentoTelefono = sc.next();
 				Telefono telefono = new Telefono(modeloTelefono, marcaTelefono, precioTelefono, descuentoTelefono);
 				catalogo.annadirTelefono(telefono);
-				//telefono.precioTotal(precioTelefono, descuentoTelefono);
 			}
 			sc.close();
 		} catch (FileNotFoundException e){
