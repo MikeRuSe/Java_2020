@@ -6,7 +6,6 @@ import java.lang.StringBuilder;
 
 public class Catalogo{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
-	//private int linea_valor_modificar = catalogo.indexOf("Valor a modificar");
 
 	public void annadirTelefono(Telefono telefono) {
 		coleccionTelefonos.add(telefono);
