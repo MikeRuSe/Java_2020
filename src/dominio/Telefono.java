@@ -21,7 +21,7 @@ public class Telefono{
 	 * @param marcaTelefono marca del telefono 
 	 * @param precioTelefono precio del telefono
 	 * @param descuentoTelefono descuento del telefono 
-	 * @param precioFinalString precio final del telefono
+	 * @param precioTotal precio final del telefono
 	 */
 
 	public Telefono(String modeloTelefono, String marcaTelefono, String precioTelefono, String descuentoTelefono, String precioTotal){

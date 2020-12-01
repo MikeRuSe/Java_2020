@@ -35,22 +35,26 @@ public class Interfaz{
 		String[] args = input.split(" ");
 		Catalogo catalogo = inicializarCatalogo(NOMBRE_FICHERO);
 		if (args.length < 1) {
-			System.err.println("NO HAY SUFICIENTES PARAMETROS");
+			System.err.println("ERROR: 'NO HAY SUFICIENTES PARAMETROS'");
 			System.exit(128);
 		} else {
 			if(args[0].equals("help")){
 				System.out.println(HELP);
 			} else if (args[0].equals("list")){
 				if(catalogo.toString().equals("")){
-					System.out.println("No hay ningún telefono en el catalogo");
+					System.out.println("ADVERTENCIA: 'No hay ningún telefono en el catalogo'");
 				} else {
 					System.out.println(catalogo);
 				}
 			} else if (args[0].equals("add")){
 				if (args.length < 5) {
-					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.err.println("ERROR: 'NO HAY SUFICIENTES PARAMETROS'");
 					System.exit(128);
-				} else {
+				} 
+				else if (args.length > 5) {
+					System.err.println("ERROR: 'SE HAN INTRODUCIDO DEMASIADOS PARAMETROS'");
+					System.exit(129);
+				}  else {
 				Telefono telefono = new Telefono(args[1], args[2], args[3], args[4], "");
 				catalogo.annadirTelefono(telefono);
 				inicializarFichero(catalogo);
@@ -58,8 +62,12 @@ public class Interfaz{
 			}
 			else if (args[0].equals("modify")){
 				if (args.length < 6) {
-					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.err.println("ERROR: 'NO HAY SUFICIENTES PARAMETROS'");
 					System.exit(128);
+				} 
+				else if (args.length > 6) {
+					System.err.println("ERROR: 'SE HAN INTRODUCIDO DEMASIADOS PARAMETROS'");
+					System.exit(129);
 				} else {
 				String argumentos = args[1];
 				Telefono telefono = new Telefono(args[2], args[3], args[4], args[5], "");
@@ -71,8 +79,12 @@ public class Interfaz{
 			}
 			else if (args[0].equals("remove")){
 				if (args.length < 2) {
-					System.err.println("NO HAY SUFICIENTES PARAMETROS");
+					System.err.println("ERROR: 'NO HAY SUFICIENTES PARAMETROS'");
 					System.exit(128);
+				} 
+				else if (args.length > 2) {
+					System.err.println("ERROR: 'SE HAN INTRODUCIDO DEMASIADOS PARAMETROS'");
+					System.exit(129);
 				} else {
 				String argumentos = args[1];
 				catalogo.eliminarTelefono(argumentos);
