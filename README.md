@@ -7,7 +7,7 @@ Programa que permite el alta, baja y modificación de productos (en este caso di
 
 
 ## Requisitos 
-
+##### Sistema operativo Linux (Debian / Ubuntu / CentOS) #####
 ##### Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS). #####
 ```BASH
 sudo apt-get update  
@@ -26,12 +26,16 @@ git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
 ```BASH
 cd final-project
 ```
+##### Instalar make:#####
+```BASH
+sudo apt-get install build-essential
+```
 ##### Compilar el programa con: #####
 ```BASH
 make compilar
 ```
 ### Diagrama del programa ###
-![](https://i.gyazo.com/f2919e6e99b4fd80ba9a31d2eec9175b.png)
+![https://bitbucket.org/MigueLitros/final-project/src/master/img/Umbrello.jpeg](https://i.gyazo.com/f2919e6e99b4fd80ba9a31d2eec9175b.png)
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
