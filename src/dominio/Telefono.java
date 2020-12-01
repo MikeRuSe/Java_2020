@@ -1,5 +1,7 @@
 package dominio;
 
+import java.lang.Math;
+
 public class Telefono{
 	private String modeloTelefono;
 	private String marcaTelefono;
@@ -95,24 +97,19 @@ public class Telefono{
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
-	public String precioTotal(String precioTelefono, String descuentoTelefono){
-		int precioTelefonoInt = 1000;
-		int descuentoTelefonoInt = 15;
-		try {
-   			precioTelefonoInt = Integer.parseInt(precioTelefono);
-			}
-		catch (NumberFormatException e) {
-   			precioTelefonoInt = 0;
+	public Double precioTotal(String precioTelefono, String descuentoTelefono){
+		if (descuentoTelefono == null || descuentoTelefono.isEmpty()) {
+			return Double.parseDouble(precioTelefono);
 		}
+		Double precioTelefonoDouble = 0.0;
+		Double descuentoTelefonoDouble = 0.0;
 		try {
-   			descuentoTelefonoInt = Integer.parseInt(descuentoTelefono);
-			}	
-		catch (NumberFormatException e) {
-   			descuentoTelefonoInt = 0;
+			precioTelefonoDouble = Double.parseDouble(precioTelefono);
+   			descuentoTelefonoDouble = Double.parseDouble(descuentoTelefono);
+		} catch (NumberFormatException e) {
+   			descuentoTelefonoDouble = 0.0;
 		}
-		int precioFinal = (precioTelefonoInt * ((100 - descuentoTelefonoInt)/100));
-		precioFinalString = String.valueOf(precioFinal);
-		return precioFinalString;
+		return (double)Math.round(precioTelefonoDouble *(100 - descuentoTelefonoDouble))/100;
 	}
 	
 	/**
@@ -121,7 +118,11 @@ public class Telefono{
 	 */
 
 	public String toString(){
-		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " /* + precioTotal(precioTelefono, descuentoTelefono) */ + "\n";
+		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioTotal(precioTelefono, descuentoTelefono) + "\n";
 	}
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> 97c0e002a576ed42859a612359315ce7e59170e1
