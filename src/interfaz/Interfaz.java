@@ -7,12 +7,30 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
+/**
+
+ * Esta clase interpreta los datos que el usuario introduce en Principal.java
+
+ * @author: Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
+
+ * @version: 1.0.14
+
+ */
+
 public class Interfaz{
 	private static String HELP = "-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> " +
 								 "\n-Listar telefonos:" + "\n   java -cp bin aplicacion.Principal list" +
 								 "\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
 								 "\n-Borrar telefonos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>";
 	private static String NOMBRE_FICHERO = "catalogoDeTelefonos.txt";
+	
+	/**
+	 *
+	 * Este método procesa los datos según el usuario lo haya especificado
+	 *
+	 * @param input datos que introduce el usuario
+	 *
+	 */
 
 	public static void procesado(String input){
 		String[] args = input.split(" ");
@@ -32,7 +50,6 @@ public class Interfaz{
 		}
 		else if (args[0].equals("modify")){
 			String argumentos = args[1];
-			//int index = catalogo.coleccionTelefonos.indexOf(args[1]);
 			Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
 			System.out.println("Datos sin actualizar: \n" + catalogo.toString());
 			catalogo.modificarTelefono(telefono, argumentos);
@@ -41,11 +58,18 @@ public class Interfaz{
 		}
 		else if (args[0].equals("remove")){
 			String argumentos = args[1];
-			//int index = catalogo.indexOf(args[1]);
 			catalogo.eliminarTelefono(argumentos);
 			inicializarFichero(catalogo);
 		}
 	}
+
+	/**
+	 *
+	 * Este método escribe los datos en un fichero
+	 *
+	 * @param catalogo datos que se introducen en el fichero
+	 *
+	 */
 
 	private static void inicializarFichero(Catalogo catalogo){
 		try{
@@ -56,6 +80,14 @@ public class Interfaz{
 			System.out.println(e);
 		}
 	}
+
+	/**
+	 *
+	 * Este método devuelve los datos del catálogo de móviles
+	 *
+	 * @return catalogo de móviles
+	 *
+	 */
 
 	private static Catalogo inicializarCatalogo(String nombreFichero){
 		Catalogo catalogo = new Catalogo();
