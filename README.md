@@ -20,15 +20,15 @@ Programa que permite el alta, baja y modificación de productos (en este caso di
 ```
 3. Realizar un git clone del repositorio:
 ```BASH
-git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
+> git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
 ```
-4. Ubcarnos en la carpeta del programa:
+4. Ubicarnos en la carpeta del programa:
 ```BASH
-cd final-project
+> cd final-project
 ```
 5. Compilar el programa con:
 ```BASH
-make compilar
+> make compilar
 ```
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
