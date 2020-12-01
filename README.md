@@ -35,7 +35,7 @@ sudo apt-get install build-essential
 make compilar
 ```
 ### Diagrama del programa ###
-![https://bitbucket.org/MigueLitros/final-project/src/master/img/Umbrello.jpeg](https://i.gyazo.com/f2919e6e99b4fd80ba9a31d2eec9175b.png)
+![https://bitbucket.org/MigueLitros/final-project/src/master/img/CatalogoTelefonos.png](https://i.gyazo.com/4e78c8e248f5bd47a9ebbb845ede843a.png)
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
