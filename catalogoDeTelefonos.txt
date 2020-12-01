@@ -1,5 +1,3 @@
-Galaxy_A6 Samsung 350_EUR 7 
-Galaxy_S5 Samsung 550_EUR 9 
 Galaxy_S10 Samsung 850_EUR 13 
 Iphone_SE_1 Apple 799_EUR 5 
 Iphone_10 Apple 1099_EUR 15 

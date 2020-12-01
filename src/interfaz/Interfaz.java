@@ -8,7 +8,10 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Interfaz{
-	private static String HELP = "Texto de ayuda";
+	private static String HELP = "-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> " +
+								 "\n-Listar telefonos:" + "\n   java -cp bin aplicacion.Principal list" +
+								 "\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
+								 "\n-Borrar telefonos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>";
 	private static String NOMBRE_FICHERO = "catalogoDeTelefonos.txt";
 
 	public static void procesado(String input){
