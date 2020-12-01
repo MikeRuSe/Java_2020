@@ -7,7 +7,6 @@ public class Telefono{
 	private String marcaTelefono;
 	private String precioTelefono; 
 	private String descuentoTelefono;
-	private String precioFinalString;
 
 	public Telefono(){
 		modeloTelefono = "";
@@ -51,7 +50,7 @@ public class Telefono{
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
-	public Double precioTotal(String precioTelefono, String descuentoTelefono){
+	public Double precioFinal(String precioTelefono, String descuentoTelefono){
 		if (descuentoTelefono == null || descuentoTelefono.isEmpty()) {
 			return Double.parseDouble(precioTelefono);
 		}
@@ -67,6 +66,6 @@ public class Telefono{
 	}
 
 	public String toString(){
-		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioTotal(precioTelefono, descuentoTelefono) + "\n";
+		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioFinal(precioTelefono, descuentoTelefono) + "\n";
 	}
 }
