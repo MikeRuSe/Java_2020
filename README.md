@@ -10,26 +10,28 @@ Programa que permite el alta, baja y modificación de productos (en este caso di
 
 ##### Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS). #####
 ```BASH
-> sudo apt-get update  
-> sudo apt install default-jre
+sudo apt-get update  
+sudo apt install default-jre
 ```
 ##### Git  2.28.0 instalado #####
 ```BASH
-> sudo apt-get update  
-> sudo apt-get install git -y
+sudo apt-get update  
+sudo apt-get install git -y
 ```
 ##### Realizar un git clone del repositorio: #####
 ```BASH
-> git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
+git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
 ```
 ##### Ubicarnos en la carpeta del programa: #####
 ```BASH
-> cd final-project
+cd final-project
 ```
 ##### Compilar el programa con: #####
 ```BASH
-> make compilar
+make compilar
 ```
+### Diagrama del programa ###
+![](https://i.gyazo.com/f2919e6e99b4fd80ba9a31d2eec9175b.png)
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
