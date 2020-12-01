@@ -1,6 +1,5 @@
 package dominio;
 
-import dominio.Telefono;
 import java.util.ArrayList;
 import java.lang.StringBuilder;
 

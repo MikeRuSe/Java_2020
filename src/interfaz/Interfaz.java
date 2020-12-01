@@ -5,7 +5,6 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
 import java.io.FileWriter;
-import java.util.ArrayList;
 
 /**
  *
@@ -52,7 +51,7 @@ public class Interfaz{
 					System.err.println("NO HAY SUFICIENTES PARAMETROS");
 					System.exit(128);
 				} else {
-				Telefono telefono = new Telefono(args[1], args[2], args[3], args[4]);
+				Telefono telefono = new Telefono(args[1], args[2], args[3], args[4], "");
 				catalogo.annadirTelefono(telefono);
 				inicializarFichero(catalogo);
 				}
@@ -63,7 +62,7 @@ public class Interfaz{
 					System.exit(128);
 				} else {
 				String argumentos = args[1];
-				Telefono telefono = new Telefono(args[2], args[3], args[4], args[5]);
+				Telefono telefono = new Telefono(args[2], args[3], args[4], args[5], "");
 				System.out.println("Datos sin actualizar: \n" + catalogo.toString());
 				catalogo.modificarTelefono(telefono, argumentos);
 				System.out.println("Datos actualizados: \n" + catalogo.toString());
@@ -119,7 +118,8 @@ public class Interfaz{
 				String marcaTelefono = sc.next();
 				String precioTelefono = sc.next();
 				String descuentoTelefono = sc.next();
-				Telefono telefono = new Telefono(modeloTelefono, marcaTelefono, precioTelefono, descuentoTelefono);
+				String precioTotal = sc.next();
+				Telefono telefono = new Telefono(modeloTelefono, marcaTelefono, precioTelefono, descuentoTelefono, precioTotal);
 				catalogo.annadirTelefono(telefono);
 			}
 			sc.close();
