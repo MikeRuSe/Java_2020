@@ -1,5 +1,3 @@
-# README #
-
 # Proyecto 1: gestor de catálogo de productos o servicios
 
 ## Descripción
