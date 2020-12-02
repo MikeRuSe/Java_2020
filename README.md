@@ -55,6 +55,10 @@ java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marc
 ```BASH
 java -cp bin aplicacion.Principal remove <Modelo_borrar>
 ```
+#### Mostrar cuadro de ayuda ####
+```BASH
+java -cp bin aplicacion.Principal help
+```
 
 ### Desarrolladores ###
 
