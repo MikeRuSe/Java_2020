@@ -19,7 +19,7 @@ public class Catalogo{
 	/**
 	* Este metodo permite eliminar un Telefono previamente añadido del la lista del catálogo,
 	*
-	* @param telefono eliminado del catálogo
+	* @param argumentos eliminado del catálogo
 	*/
 
 	public void eliminarTelefono(String argumentos) {
@@ -35,6 +35,7 @@ public class Catalogo{
 	* Este metodo permite modificar un Telefono de la lista del catálogo,
 	*
 	* @param telefono modificado del catálogo
+	* @param argumentos modificado del catálogo
 	*/
 
 	public void modificarTelefono(Telefono telefono, String argumentos) {

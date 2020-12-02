@@ -10,10 +10,6 @@ import java.io.FileWriter;
  *
  * Esta clase interpreta los datos que el usuario introduce en Principal.java
  *
- * @author: Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
- *
- * @version: 1.2.14.12220
- *
  */
 
 public class Interfaz{
