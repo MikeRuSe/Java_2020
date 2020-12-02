@@ -24,7 +24,7 @@ public class Interfaz{
 	 *
 	 * Este método procesa los datos según el usuario lo haya especificado
 	 *
-	 * @param input datos que introduce el usuario
+	 * @param input parámetros que introduce el usuario por consola
 	 *
 	 */
 
