@@ -15,10 +15,14 @@ Versión estable: 1.2.14.12220 (12-02-2020).
 sudo apt-get update  
 sudo apt install default-jre
 ```
-##### Git  2.28.0 instalado #####
+##### Git 2.28.0 instalado #####
 ```BASH
 sudo apt-get update  
 sudo apt-get install git -y
+```
+##### Instalar make:#####
+```BASH
+sudo apt-get install build-essential
 ```
 ##### Realizar un git clone del repositorio: #####
 ```BASH
@@ -27,10 +31,6 @@ git clone https://MigueLitros@bitbucket.org/MigueLitros/final-project.git
 ##### Ubicarnos en la carpeta del programa: #####
 ```BASH
 cd final-project
-```
-##### Instalar make:#####
-```BASH
-sudo apt-get install build-essential
 ```
 ##### Compilar el programa con: #####
 ```BASH
