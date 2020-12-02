@@ -11,7 +11,7 @@ import interfaz.Interfaz;
  * - modify
  * - help
  * 
- * (Cualquier otro parámetro dará error 127)
+ * (Cualquier otro parámetro generará el error 127 'No se reconoce el parametro').
  *
  *@author: Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
  * 
