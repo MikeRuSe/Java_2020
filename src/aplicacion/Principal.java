@@ -3,6 +3,15 @@ package aplicacion;
 import interfaz.Interfaz;
 /*
  * Esta clase recibe argumentos por consola y los manda a interfaz para ejecutarlos
+ * 
+ * Los parámetros permitidos son:
+ * - list
+ * - remove
+ * - add
+ * - modify
+ * - help
+ * 
+ * (Cualquier otro parámetro dará error 127)
  *
  *@author: Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
  * 
@@ -11,7 +20,7 @@ import interfaz.Interfaz;
 public class Principal{
 
 	/**
-	 * Toma como entrada una cadena de caracteres
+	 * Toma como entrada unos argumentoss por consola
 	 * @param args Argumentos del programa 
 	 * */
         public static void main(String[] args){
