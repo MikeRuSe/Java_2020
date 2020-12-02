@@ -7,7 +7,7 @@ Versión estable: 1.2.14.12220 (12-02-2020).
 
 
 ## Requisitos 
-##### Sistema operativo Linux (Debian / Ubuntu / CentOS) #####
+##### Sistema operativo Linux (Debian / Ubuntu / CentOS) o Windows con Git #####
 ##### Java 11.0.8 2020-07-14 & Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS). #####
 ```BASH
 sudo apt-get update  
