@@ -35,7 +35,7 @@ public class Catalogo{
 	* Este metodo permite modificar un Telefono de la lista del catálogo,
 	*
 	* @param telefono modificado del catálogo
-	* @param argumentos modificado del catálogo
+	* @param argumentos argumentos para realizar la búsqueda en la ArrayList
 	*/
 
 	public void modificarTelefono(Telefono telefono, String argumentos) {
