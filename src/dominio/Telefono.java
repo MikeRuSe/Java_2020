@@ -103,6 +103,13 @@ public class Telefono{
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
+	/**
+	 * Este metodo calcula el precio total del telefono y lo devuelde con el descuento aplicado en el caso de que lo tenga
+	 * @param precioTelefono precio original del descuento
+	 * @param descuentoTelefono descuento a aplicar
+ 	 * @return precio final del telefono con o sin descuento
+ 	*/
+
 	public Double precioFinal(String precioTelefono, String descuentoTelefono){
 		if (descuentoTelefono == null || descuentoTelefono.isEmpty()) {
 			return Double.parseDouble(precioTelefono);
