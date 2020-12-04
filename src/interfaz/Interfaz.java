@@ -21,11 +21,9 @@ public class Interfaz{
 	private static String NOMBRE_FICHERO = "catalogoDeTelefonos.txt";
 	
 	/**
-	 *
 	 * Este método procesa los datos según el usuario lo haya especificado
 	 *
 	 * @param input parámetros que introduce el usuario por consola
-	 *
 	 */
 
 	public static void procesado(String input){
@@ -96,11 +94,9 @@ public class Interfaz{
 	}
 
 	/**
-	 *
 	 * Este método escribe los datos en un fichero
 	 *
 	 * @param catalogo datos que se introducen en el fichero
-	 *
 	 */
 
 	private static void inicializarFichero(Catalogo catalogo){
@@ -114,11 +110,9 @@ public class Interfaz{
 	}
 
 	/**
-	 *
 	 * Este método devuelve los Telefonos del catálogo de móviles
 	 *
 	 * @return catalogo de móviles
-	 *
 	 */
 
 	private static Catalogo inicializarCatalogo(String nombreFichero){
