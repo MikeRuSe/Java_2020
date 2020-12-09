@@ -2,6 +2,12 @@ package dominio;
 
 import java.lang.Math;
 
+/**
+ *
+ *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas del telefono
+ *
+ */
+
 public class Telefono{
 	private String modeloTelefono;
 	private String marcaTelefono;
