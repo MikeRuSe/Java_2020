@@ -3,6 +3,12 @@ package dominio;
 import java.util.ArrayList;
 import java.lang.StringBuilder;
 
+/**
+ *
+ * Esta clase crea las ArrayList con los Strings de Telefono.java
+ *
+ */
+
 public class Catalogo{
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
 
