@@ -17,6 +17,7 @@ public class Interfaz {
 								 "\n\n-Listar telefonos:" + "\n   java -cp bin aplicacion.Principal list" +
 								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
 								 "\n\n-Borrar telefonos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
+								 "\n\n-Exportar catalogo a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
 								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";
 	private static String NOMBRE_FICHERO = "catalogoDeTelefonos.txt";
 	private static String NOMBRE_CSV = "catalogoDeTelefonos.csv";
@@ -78,10 +79,15 @@ public class Interfaz {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
 				} 
-				else if (args.length > 1) {
+				else if (args.length == 1) {
+					generarCSV(catalogo);
+					System.err.println("Se ha generado el fichero '" + NOMBRE_CSV +"'");
+				} 
+				else if (args.length > 2) {
 					System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 					System.exit(126);
 				} else {
+					NOMBRE_CSV = args[1]+".csv";
 					generarCSV(catalogo);
 					System.err.println("Se ha generado el fichero '" + NOMBRE_CSV +"'");
 				}

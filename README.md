@@ -55,6 +55,10 @@ java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marc
 ```BASH
 java -cp bin aplicacion.Principal remove <Modelo_borrar>
 ```
+#### Exportar el catalogo a CSV ####
+```BASH
+java -cp bin aplicacion.Principal <nombre_fichero(opcional)>
+```
 #### Mostrar cuadro de ayuda ####
 ```BASH
 java -cp bin aplicacion.Principal help
