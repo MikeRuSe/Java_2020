@@ -9,7 +9,7 @@ import java.lang.StringBuilder;
  *
  */
 
-public class Catalogo{
+public class Catalogo {
 	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
 
 	/**
@@ -61,7 +61,7 @@ public class Catalogo{
 
 	public String toString() {
 		StringBuilder datos = new StringBuilder();
-		for (Telefono telefono : coleccionTelefonos){
+		for (Telefono telefono : coleccionTelefonos) {
 			datos.append(telefono);
 		}
 		return datos.toString();

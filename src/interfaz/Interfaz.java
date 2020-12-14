@@ -12,7 +12,7 @@ import java.io.FileWriter;
  *
  */
 
-public class Interfaz{
+public class Interfaz {
 	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> " +
 								 "\n\n-Listar telefonos:" + "\n   java -cp bin aplicacion.Principal list" +
 								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
@@ -26,22 +26,22 @@ public class Interfaz{
 	 * @param input parámetros que introduce el usuario por consola
 	 */
 
-	public static void procesado(String input){
+	public static void procesado(String input) {
 		String[] args = input.split(" ");
 		Catalogo catalogo = inicializarCatalogo(NOMBRE_FICHERO);
 		if (args.length < 1) {
 			System.err.println("ERROR: 'No hay suficientes parametros.'");
 			System.exit(128);
 		} else {
-			if(args[0].equals("help")){
+			if(args[0].equals("help")) {
 				System.out.println(HELP);
-			} else if (args[0].equals("list")){
-				if(catalogo.toString().equals("")){
+			} else if (args[0].equals("list")) {
+				if(catalogo.toString().equals("")) {
 					System.out.println("ADVERTENCIA: 'No hay ningun telefono en el catalogo.'");
 				} else {
 					System.out.println(catalogo);
 				}
-			} else if (args[0].equals("add")){
+			} else if (args[0].equals("add")) {
 				if (args.length < 5) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
@@ -55,7 +55,7 @@ public class Interfaz{
 				inicializarFichero(catalogo);
 				}
 			}
-			else if (args[0].equals("modify")){
+			else if (args[0].equals("modify")) {
 				if (args.length < 6) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
@@ -72,7 +72,7 @@ public class Interfaz{
 				inicializarFichero(catalogo);
 				}
 			}
-			else if (args[0].equals("remove")){
+			else if (args[0].equals("remove")) {
 				if (args.length < 2) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
@@ -99,12 +99,12 @@ public class Interfaz{
 	 * @param catalogo datos que se introducen en el fichero
 	 */
 
-	private static void inicializarFichero(Catalogo catalogo){
-		try{
+	private static void inicializarFichero(Catalogo catalogo) {
+		try {
 			FileWriter fw = new FileWriter(NOMBRE_FICHERO);
 			fw.write(catalogo.toString());
 			fw.close();
-		} catch (Exception e){
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
@@ -115,12 +115,12 @@ public class Interfaz{
 	 * @return catalogo de móviles
 	 */
 
-	private static Catalogo inicializarCatalogo(String nombreFichero){
+	private static Catalogo inicializarCatalogo(String nombreFichero) {
 		Catalogo catalogo = new Catalogo();
 		try{
 			File file = new File(nombreFichero);
 			Scanner sc = new Scanner(file);
-			while(sc.hasNext()){
+			while(sc.hasNext()) {
 				String modeloTelefono = sc.next();
 				String marcaTelefono = sc.next();
 				String precioTelefono = sc.next();
@@ -130,12 +130,11 @@ public class Interfaz{
 				catalogo.annadirTelefono(telefono);
 			}
 			sc.close();
-		} catch (FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 			inicializarFichero(catalogo);
-		} catch (Exception e){
+		} catch (Exception e) {
 			System.out.println(e);
 		}
 		return catalogo;
 	}
 }
-

@@ -8,13 +8,13 @@ import java.lang.Math;
  *
  */
 
-public class Telefono{
+public class Telefono {
 	private String modeloTelefono;
 	private String marcaTelefono;
 	private String precioTelefono; 
 	private String descuentoTelefono;
 
-	public Telefono(){
+	public Telefono() {
 		modeloTelefono = "";
 		marcaTelefono = "";
 		precioTelefono = "";
@@ -30,7 +30,7 @@ public class Telefono{
 	 * @param precioTotal precio final del telefono
 	 */
 
-	public Telefono(String modeloTelefono, String marcaTelefono, String precioTelefono, String descuentoTelefono, String precioTotal){
+	public Telefono(String modeloTelefono, String marcaTelefono, String precioTelefono, String descuentoTelefono, String precioTotal) {
 		this.modeloTelefono = modeloTelefono;
 		this.marcaTelefono = marcaTelefono;
 		this.precioTelefono = precioTelefono;
@@ -42,7 +42,7 @@ public class Telefono{
 	 * @return modelo del telefono
 	 */
 
-	public String getModeloTelefono(){
+	public String getModeloTelefono() {
 		return modeloTelefono;
 	}
 	
@@ -51,7 +51,7 @@ public class Telefono{
 	 * @param modeloTelefono nuevo modelo del telefono 
 	 */
 
-	public void setModeloTelefono(String modeloTelefono){
+	public void setModeloTelefono(String modeloTelefono) {
 		this.modeloTelefono = modeloTelefono;
 	}
 
@@ -60,7 +60,7 @@ public class Telefono{
 	 * @return marca del telefono
 	 */
 
-	public String getMarcaTelefono(){
+	public String getMarcaTelefono() {
 		return marcaTelefono;
 	}
 	
@@ -69,7 +69,7 @@ public class Telefono{
 	 * @param marcaTelefono nueva marca del telefono 
 	 */
 
-	public void setMarcaTelefono(String marcaTelefono){
+	public void setMarcaTelefono(String marcaTelefono) {
 		this.marcaTelefono = marcaTelefono;
 	}
 
@@ -78,7 +78,7 @@ public class Telefono{
 	 * @return precio del telefono
 	 */
 
-	public String getPrecioTelefono(){
+	public String getPrecioTelefono() {
 		return precioTelefono; 
 	}
 	
@@ -87,7 +87,7 @@ public class Telefono{
 	 * @param precioTelefono nuevo precio del telefono
 	 */
 
-	public void setPrecioTelefono(String precioTelefono){
+	public void setPrecioTelefono(String precioTelefono) {
 		this.precioTelefono = precioTelefono;
 	}
 
@@ -96,7 +96,7 @@ public class Telefono{
 	 * @return descuento del telefono
 	 */
 
-	public String getDescuentoTelefono(){
+	public String getDescuentoTelefono() {
 		return descuentoTelefono; 
 	}
 
@@ -105,7 +105,7 @@ public class Telefono{
 	 * @param descuentoTelefono aplica el descuento
 	 */
 
-	public void setDescuentoTelefono(String descuentoTelefono){
+	public void setDescuentoTelefono(String descuentoTelefono) {
 		this.descuentoTelefono = descuentoTelefono; 
 	}
 
@@ -116,7 +116,7 @@ public class Telefono{
  	 * @return precio final del telefono con o sin descuento
  	*/
 
-	public Double precioFinal(String precioTelefono, String descuentoTelefono){
+	public Double precioFinal(String precioTelefono, String descuentoTelefono) {
 		if (descuentoTelefono == null || descuentoTelefono.isEmpty()) {
 			return Double.parseDouble(precioTelefono);
 		}
@@ -136,7 +136,7 @@ public class Telefono{
 	 * @return todas las caracteristicas
 	 */
 
-	public String toString(){
+	public String toString() {
 		return  modeloTelefono + " " + marcaTelefono + " " + precioTelefono + " " + descuentoTelefono + " " + precioFinal(precioTelefono, descuentoTelefono) + "\n";
 	}
 

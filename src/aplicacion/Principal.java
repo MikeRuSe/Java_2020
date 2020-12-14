@@ -23,9 +23,9 @@ public class Principal{
          * 
          * (Cualquier otro parámetro generará el error 127 'No se reconoce el parametro'). 
         */
-        public static void main(String[] args){
+        public static void main(String[] args) {
                 String input = "";
-                for(int i = 0; i< args.length; i++){
+                for(int i = 0; i< args.length; i++) {
                         input += args[i] + " ";
                 }
                 Interfaz.procesado(input);
