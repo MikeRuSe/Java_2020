@@ -53,12 +53,22 @@ public class Catalogo {
     	}
     }
 
-	/**
+	
+	public String toCSV(){
+	StringBuilder datos = new StringBuilder();
+	for (Telefono telefono : coleccionTelefonos){
+	     datos.append(telefono.toCSV());
+	}
+	return datos.toString();
+	}
+
+
+        /**
 	* Este metodo permite recoger los datos introducidos y los devuelve,
 	*
 	* @return datos del catálogo
 	*/
-
+	
 	public String toString() {
 		StringBuilder datos = new StringBuilder();
 		for (Telefono telefono : coleccionTelefonos) {

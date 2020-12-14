@@ -131,6 +131,10 @@ public class Telefono {
 		return (double)Math.round(precioTelefonoDouble *(100 - descuentoTelefonoDouble))/100;
 	}
 	
+	public String toCSV(){
+		return modeloTelefono + "," + marcaTelefono + "," + precioTelefono + "," + descuentoTelefono + "\n";
+	}		
+	
 	/**
 	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono
 	 * @return todas las caracteristicas
