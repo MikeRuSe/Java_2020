@@ -54,6 +54,20 @@ public class Catalogo {
     }
 
 	/**
+	* Este metodo permite recoger los datos introducidos y los devuelve con formato de texto CSV (separando cada valor con comas)
+	*
+	* @return datos del catálogo en CSV
+	*/
+
+	public String toCSV() {
+		StringBuilder datos = new StringBuilder();
+		for (Telefono telefono : coleccionTelefonos){
+			datos.append(telefono.toCSV());
+		}
+		return datos.toString();
+	}
+
+	/**
 	* Este metodo permite recoger los datos introducidos y los devuelve,
 	*
 	* @return datos del catálogo

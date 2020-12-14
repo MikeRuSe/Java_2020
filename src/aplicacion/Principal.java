@@ -7,7 +7,7 @@ import interfaz.Interfaz;
  *
  * @author Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
  * 
- * @version 1.2.14.12220
+ * @version 1.3.0.121420
  */
 public class Principal {
 

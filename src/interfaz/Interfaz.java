@@ -19,7 +19,8 @@ public class Interfaz {
 								 "\n\n-Borrar telefonos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
 								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";
 	private static String NOMBRE_FICHERO = "catalogoDeTelefonos.txt";
-	
+	private static String NOMBRE_CSV = "catalogoDeTelefonos.csv";
+	private static String CABEZERA = "Modelo,Marca,Precio,Descuento,Precio_final";
 	/**
 	 * Este método procesa los datos según el usuario lo haya especificado
 	 *
@@ -72,6 +73,19 @@ public class Interfaz {
 				inicializarFichero(catalogo);
 				}
 			}
+			else if (args[0].equals("csv")) {
+				if (args.length < 1) {
+					System.err.println("ERROR: 'No hay suficientes parametros.'");
+					System.exit(128);
+				} 
+				else if (args.length > 1) {
+					System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
+					System.exit(126);
+				} else {
+					generarCSV(catalogo);
+					System.err.println("Se ha generado el fichero '" + NOMBRE_CSV +"'");
+				}
+			}
 			else if (args[0].equals("remove")) {
 				if (args.length < 2) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
@@ -109,6 +123,24 @@ public class Interfaz {
 		}
 	}
 
+	/**
+	 * Este método exporta los datos en un csv con una cabecera 
+	 *
+	 * @param CABEZERA datos de la cabezera (por si en un futuro se insertan en una base de datos)
+	 * @param catalogo datos que se introducen en el fichero
+	 */
+
+	private static void generarCSV(Catalogo catalogo) {
+		try {
+			FileWriter fw = new FileWriter(NOMBRE_CSV);
+			fw.write(CABEZERA);
+			fw.write("\n");
+			fw.write(catalogo.toCSV());
+			fw.close();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
 	/**
 	 * Este método devuelve los Telefonos del catálogo de móviles
 	 *

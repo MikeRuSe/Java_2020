@@ -5,7 +5,7 @@ Programa que permite el alta, baja y modificación de productos (en este caso di
 
 Es capaz de obtener el precio base y aplicarle el descuento introducido de forma automática.
 
-Versión estable: 1.2.14.12220 (12-02-2020).
+Versión estable: 1.3.0.121420 (12-14-2020).
 
 
 ## Requisitos 
