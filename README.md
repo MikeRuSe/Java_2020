@@ -73,5 +73,6 @@ java -cp bin aplicacion.Principal help
 
 ### Licencia ###
 ![https://bitbucket.org/MigueLitros/final-project/src/master/img/logo_cc.jpg](https://i.gyazo.com/d5c2f506fdd9e679b02c9bfaa28193e3.png)
+
 Type: CC BY,
 This license lets others distribute, remix, adapt, and build upon your work, even commercially, as long as they credit you for the original creation. This is the most accommodating of licenses offered. Recommended for maximum dissemination and use of licensed materials.
