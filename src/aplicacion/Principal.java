@@ -9,7 +9,7 @@ import interfaz.Interfaz;
  * 
  * @version 1.2.14.12220
  */
-public class Principal{
+public class Principal {
 
 	/**
 	 * Toma como entrada unos argumentoss por consola
