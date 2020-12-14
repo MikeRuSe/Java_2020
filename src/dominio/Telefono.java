@@ -132,10 +132,10 @@ public class Telefono {
 	}
 	
 	/**
-	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono con formato CSV
-	 * @return todas las caracteristicas separadas con comas
+	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV
+	 * @return todas las caracteristicas separadas por comas
 	 */
-	
+
 	public String toCSV() {
 		return  modeloTelefono + "," + marcaTelefono + "," + precioTelefono + "," + descuentoTelefono + "," + precioFinal(precioTelefono, descuentoTelefono) + "\n";
 	}
