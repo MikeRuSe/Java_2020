@@ -5,11 +5,14 @@ import interfaz.Interfaz;
  * Esta clase recibe argumentos por consola y los manda a interfaz para ejecutarlos
  * 
  *
- * @author Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibeth Medina Chirinos, Miguel Rubio Semelas
+ * @author Jorge Martin-Benito Garcia
+ * @author Xavier Alexander Mora Peraza
+ * @author Dulibeth Medina Chirinos
+ * @author Miguel Rubio Semelas
  * 
  * @version 1.2.14.12220
  */
-public class Principal {
+public class Principal{
 
 	/**
 	 * Toma como entrada unos argumentoss por consola
