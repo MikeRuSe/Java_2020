@@ -65,16 +65,18 @@ public class Interfaz {
 					System.exit(126);
 				}  else {
 					String modelo= args[1];
-					if ((modelo.endsWith(",")) || (modelo.endsWith(".")) || (modelo.endsWith("-"))) {
-						modelo = modelo.substring(0, modelo.length() - 1);
-					}
-					if (catalogo.revisarModelo(modelo) == false) {
-						Telefono telefono = new Telefono(modelo, args[2], args[3], args[4], "");
-						catalogo.annadirTelefono(telefono);
-						inicializarFichero(catalogo);
-					} else {
-						System.err.println("ERROR: 'Producto duplicado, realice un modify.'");
+					if ((modelo.contains(",")) || (modelo.contains(".")) || (modelo.contains("-"))) {
+						System.err.println("ERROR: 'Se han introducido parametros no validos.'");
 						System.exit(126);
+					} else {
+						if (catalogo.revisarModelo(modelo) == false) {
+							Telefono telefono = new Telefono(modelo, args[2], args[3], args[4], "");
+							catalogo.annadirTelefono(telefono);
+							inicializarFichero(catalogo);
+						} else {
+							System.err.println("ERROR: 'Producto duplicado, realice un modify.'");
+							System.exit(126);
+						}
 					}
 				}
 			}
@@ -88,20 +90,22 @@ public class Interfaz {
 					System.exit(126);
 				} else {
 					String modelo= args[1];
-					if ((modelo.endsWith(",")) || (modelo.endsWith(".")) || (modelo.endsWith("-"))) {
-						modelo = modelo.substring(0, modelo.length() - 1);
-					}
-					if (catalogo.revisarModelo(modelo) == true) {
-						String argumentos = args[1];
-						Telefono telefono = new Telefono(args[2], args[3], args[4], args[5], "");
-						System.out.println("Datos sin actualizar: \n" + catalogo.toString());
-						catalogo.modificarTelefono(telefono, argumentos);
-						System.out.println("Datos actualizados: \n" + catalogo.toString());
-						inicializarFichero(catalogo);
-					} else {
-						System.err.println("ERROR: 'Producto no enontrado, realice un add.'");
+					if ((modelo.contains(",")) || (modelo.contains(".")) || (modelo.contains("-"))) {
+						System.err.println("ERROR: 'Se han introducido parametros no validos.'");
 						System.exit(126);
-					}
+					} else {
+						if (catalogo.revisarModelo(modelo) == true) {
+							String argumentos = args[1];
+							Telefono telefono = new Telefono(args[2], args[3], args[4], args[5], "");
+							System.out.println("Datos sin actualizar: \n" + catalogo.toString());
+							catalogo.modificarTelefono(telefono, argumentos);
+							System.out.println("Datos actualizados: \n" + catalogo.toString());
+							inicializarFichero(catalogo);
+						} else {
+							System.err.println("ERROR: 'Producto no enontrado, realice un add.'");
+							System.exit(126);
+						}
+					}	
 				}
 			}
 			else if (args[0].equals("csv")) {
