@@ -12,3 +12,4 @@ Galaxy_K10 Samsung 750 13 652.5
 Iphone_SE Apple 499 12 439.12
 Iphone_11_PLUS Apple 799 15 679.15
 Iphone_SE_3 Apple 499 12 439.12
+Iphone_SE_4 Apple 499 12 439.12

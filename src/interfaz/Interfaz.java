@@ -64,9 +64,18 @@ public class Interfaz {
 					System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 					System.exit(126);
 				}  else {
-				Telefono telefono = new Telefono(args[1], args[2], args[3], args[4], "");
-				catalogo.annadirTelefono(telefono);
-				inicializarFichero(catalogo);
+					String modelo= args[1];
+					if ((modelo.endsWith(",")) || (modelo.endsWith(".")) || (modelo.endsWith("-"))) {
+						modelo = modelo.substring(0, modelo.length() - 1);
+					}
+					if (catalogo.revisarModelo(modelo) == false) {
+						Telefono telefono = new Telefono(modelo, args[2], args[3], args[4], "");
+						catalogo.annadirTelefono(telefono);
+						inicializarFichero(catalogo);
+					} else {
+						System.err.println("ERROR: 'Producto duplicado, realice un modify.'");
+						System.exit(126);
+					}
 				}
 			}
 			else if (args[0].equals("modify")) {
@@ -74,7 +83,7 @@ public class Interfaz {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
 				} 
-				else if (args.length > 6) {
+				else if (args.length > 5) {
 					System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 					System.exit(126);
 				} else {
@@ -172,10 +181,25 @@ public class Interfaz {
 			Scanner sc = new Scanner(file);
 			while(sc.hasNext()) {
 				String modeloTelefono = sc.next();
+				if ((modeloTelefono.endsWith(",")) || (modeloTelefono.endsWith(".")) || (modeloTelefono.endsWith("-"))) {
+					modeloTelefono = modeloTelefono.substring(0, modeloTelefono.length() - 1);
+				  }
 				String marcaTelefono = sc.next();
+				if ((marcaTelefono.endsWith(",")) || (marcaTelefono.endsWith(".")) || (marcaTelefono.endsWith("-"))) {
+					marcaTelefono = marcaTelefono.substring(0, marcaTelefono.length() - 1);
+				  }
 				String precioTelefono = sc.next();
+				if ((precioTelefono.endsWith(",")) || (precioTelefono.endsWith(".")) || (precioTelefono.endsWith("-"))) {
+					precioTelefono = precioTelefono.substring(0, precioTelefono.length() - 1);
+				  }
 				String descuentoTelefono = sc.next();
+				if ((descuentoTelefono.endsWith(",")) || (descuentoTelefono.endsWith(".")) || (descuentoTelefono.endsWith("-"))) {
+					descuentoTelefono = descuentoTelefono.substring(0, descuentoTelefono.length() - 1);
+				  }
 				String precioTotal = sc.next();
+				if ((precioTotal.endsWith(",")) || (precioTotal.endsWith(".")) || (precioTotal.endsWith("-"))) {
+					precioTotal = precioTotal.substring(0, precioTotal.length() - 1);
+				  }
 				Telefono telefono = new Telefono(modeloTelefono, marcaTelefono, precioTelefono, descuentoTelefono, precioTotal);
 				catalogo.annadirTelefono(telefono);
 			}

@@ -66,6 +66,26 @@ public class Catalogo {
     }
 
 	/**
+	* Este metodo permite verificar si el telefono que se va a añadir existe
+	*
+	* @param modelo modelo del telefono
+	* @return true/false dependiendo si existe o no
+	*/
+
+	public Boolean revisarModelo(String modelo) {
+		int A = 0;
+		for(int y = 0 ; y < coleccionTelefonos.size(); y++) {
+        	Telefono nuevo_telefono = coleccionTelefonos.get(y);
+        	if(modelo.equals(nuevo_telefono.getModeloTelefono())) {
+        		A = 1;
+        	} else {A = 0;}
+		}
+		if(A == 1){
+			return true;
+		} else {return false;}
+	}
+	
+	/**
 	* Este metodo permite recoger los datos introducidos y los devuelve con formato de texto CSV (separando cada valor con comas)
 	*
 	* @return datos del catálogo en CSV
