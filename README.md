@@ -71,10 +71,6 @@ java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>
 ```BASH
 java -cp bin aplicacion.Principal help
 ```
-#### Generar el CSV ####
-```BASH
-java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>
-```
 
 ### Desarrolladores ###
 
