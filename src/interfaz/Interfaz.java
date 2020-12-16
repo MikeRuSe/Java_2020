@@ -24,11 +24,11 @@ import java.io.FileWriter;
  *
  */
 public class Interfaz {
-	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> " +
-								 "\n\n-Insertar tablets:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add S-<Nuevo_modelo> <Marca> <precio> <descuento> " +
+								 "\n\n-Insertar tablets:" + "\n   java -cp bin aplicacion.Principal add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
 								 "\n\n-Listar dispositivos:" + "\n   java -cp bin aplicacion.Principal list" +
-								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
-								 "\n\n-Modificar tablets:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>" +
+								 "\n\n-Modificar tablets:" + "\n   java -cp bin aplicacion.Principal modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
 								 "\n\n-Borrar dispositivos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
 								 "\n\n-Exportar catalogo de dispositivos a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
 								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";

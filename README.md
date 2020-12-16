@@ -41,11 +41,11 @@ make compilar
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
-java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento>
+java -cp bin aplicacion.Principal add S-<Nuevo_modelo> <Marca> <precio> <descuento>
 ```
 #### Añadir tablets ####
 ```BASH
-java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+java -cp bin aplicacion.Principal add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
 ```
 #### Listar dispositivos ####
 ```BASH
@@ -53,15 +53,15 @@ java -cp bin aplicacion.Principal list
 ```
 #### Modificar teléfonos ####
 ```BASH
-java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>
+java -cp bin aplicacion.Principal modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>
 ```
 #### Modificar tablets ####
 ```BASH
-java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+java -cp bin aplicacion.Principal modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
 ```
 #### Borrar dispositivos ####
 ```BASH
-java -cp bin aplicacion.Principal remove <Modelo_borrar>
+java -cp bin aplicacion.Principal remove (S-/T-)<Modelo_borrar>
 ```
 #### Exportar el catalogo de dispositivos a CSV ####
 ```BASH
