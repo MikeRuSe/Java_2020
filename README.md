@@ -37,7 +37,7 @@ cd final-project
 make compilar
 ```
 ### Diagrama del programa ###
-![https://bitbucket.org/MigueLitros/final-project/src/master/img/catalogoDispositivos..png](https://i.gyazo.com/0af32ab08b4fbb730e5206bc99097c8e.png)
+![https://bitbucket.org/MigueLitros/final-project/src/master/img/catalogoDispositivos120.png](https://i.gyazo.com/7d25b435a112e4d77ee44f452c275bd6.png)
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
