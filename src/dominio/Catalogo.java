@@ -17,7 +17,7 @@ import java.lang.StringBuilder;
 
 /**
  *
- * Esta clase crea las ArrayList con los Strings de Dispositivo.java.
+ * Esta clase crea el ArrayList con los Strings de Dispositivo.java.
  *
  */
 public class Catalogo {
