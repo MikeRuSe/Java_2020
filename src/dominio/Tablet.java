@@ -42,8 +42,8 @@ public class Tablet extends Dispositivo {
 	 */
     @Override
     public String toCSV() {
-        return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + ","
-                    + capacidadBateria + "," + camaraPixel + "\n";
+        return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + ","
+                    + capacidadBateria + "," + camaraPixel + "," + getPrecioTotal() + "\n";
     }
 
 	/**
@@ -52,7 +52,7 @@ public class Tablet extends Dispositivo {
 	 */
     @Override
     public String toString() {
-        return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " " + getPrecioTotal() + " "
-                    + capacidadBateria + " " + camaraPixel + "\n";
+        return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " "
+                    + capacidadBateria + " " + camaraPixel + " " + getPrecioTotal() + "\n";
     }
 }
