@@ -17,14 +17,14 @@ import java.lang.StringBuilder;
 
 /**
  *
- * Esta clase crea las ArrayList con los Strings de Dispositivo.java
+ * Esta clase crea las ArrayList con los Strings de Dispositivo.java.
  *
  */
 public class Catalogo {
 	private ArrayList<Dispositivo> coleccionDispositivos = new ArrayList<>();
 
 	/**
-	* Este metodo permite añadir un Dispositivo a la lista del catálogo,
+	* Este metodo permite añadir un Dispositivo a la lista del catálogo.
 	*
 	* @param dispositivo nuevo en el catálogo.add
 	*/
@@ -33,7 +33,7 @@ public class Catalogo {
 	}
 
 	/**
-	* Este metodo permite eliminar un Dispositivo previamente añadido del la lista del catálogo,
+	* Este metodo permite eliminar un Dispositivo previamente añadido del la lista del catálogo.
 	*
 	* @param argumentos eliminado del catálogo
 	*/
@@ -78,7 +78,7 @@ public class Catalogo {
 	}
 	
 	/**
-	* Este metodo permite recoger los datos introducidos y los devuelve con formato de texto CSV (separando cada valor con comas)
+	* Este metodo permite recoger los datos introducidos y los devuelve con formato de texto CSV (separando cada valor con comas).
 	*
 	* @return datos del catálogo en CSV
 	*/
@@ -91,7 +91,7 @@ public class Catalogo {
 	}
 
 	/**
-	* Este metodo permite recoger los datos introducidos y los devuelve,
+	* Este metodo permite recoger los datos introducidos y los devuelve.
 	*
 	* @return datos del catálogo
 	*/

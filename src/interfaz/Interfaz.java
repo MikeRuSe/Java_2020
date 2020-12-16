@@ -20,7 +20,7 @@ import java.io.FileWriter;
 
 /**
  *
- * Esta clase interpreta los datos que el usuario introduce en Principal.java
+ * Esta clase interpreta los datos que el usuario introduce en Principal.java.
  *
  */
 public class Interfaz {
@@ -39,7 +39,7 @@ public class Interfaz {
 	private static int ATRIBUTOS_TABLET	= 6;
 	
 	/**
-	 * Este método procesa los datos según el usuario lo haya especificado
+	 * Este método procesa los datos según el usuario lo haya especificado.
 	 *
 	 * @param input parámetros que introduce el usuario por consola
 	 */
@@ -190,9 +190,9 @@ public class Interfaz {
 	}
 
 	/**
-	 * Este método escribe los datos en un fichero
+	 * Este método escribe los datos en un fichero.
 	 *
-	 * @param catalogo datos que se introducen en el fichero
+	 * @param catalogo datos que se introducen en el fichero.
 	 */
 	private static void inicializarFichero(Catalogo catalogo) {
 		try {
@@ -205,9 +205,9 @@ public class Interfaz {
 	}
 
 	/**
-	 * Este método exporta los datos en un csv con una cabecera 
+	 * Este método exporta los datos en un csv con una cabecera. 
 	 *
-	 * @param catalogo datos que se introducen en el fichero
+	 * @param catalogo datos que se introducen en el fichero.
 	 */
 	private static void generarCSV(Catalogo catalogo) {
 		try {
@@ -220,9 +220,9 @@ public class Interfaz {
 	}
 
 	/**
-	 * Este método devuelve los Telefonos del catálogo de móviles
+	 * Este método devuelve los Telefonos del catálogo de móviles.
 	 *
-	 * @return catalogo de móviles
+	 * @return catalogo de móviles.
 	 */
 	private static Catalogo inicializarCatalogo(String nombreFichero) {
 		Catalogo catalogo = new Catalogo();

@@ -14,35 +14,42 @@ package dominio;
 
 /**
  *
- *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas del telefono
+ *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas del telefono.
  *
  */
 public class Telefono extends Dispositivo {
 
 	/**
-	 * JAVADOC!!!
+	 * Este es un metodo constructor que hereda los parametros de su clase padre.
+	 * @param modelo modelo del dispositivo.
+         * @param marca marca del dispositivo.
+         * @param precio precio del dispositivo.
+         * @param descuento descuento del dispositivo.
 	 */
+
 	public Telefono(String modelo, String marca, String precio, String descuento) {
 		super(modelo, marca, precio, descuento);
 	}
 
 	/**
-	 * JAVADOC!!!
+	 * Este es un metodo constructor sin parametros que llama a la clase padre.
 	 */
+
 	public Telefono() {
 		super();
 	}
 
 	/**
-	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV
-	 * @return todas las caracteristicas separadas por comas
+	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV.
+	 * @return todas las caracteristicas separadas por comas.
 	 */
+
 	public String toCSV() {
 		return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + "\n";
 	}
 
 	/**
-	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono
+	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono.
 	 * @return todas las caracteristicas
 	 */
 	public String toString() {

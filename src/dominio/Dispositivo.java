@@ -25,7 +25,7 @@ public abstract class Dispositivo {
     private double precioTotal;
 
 	/**
-	 * JAVADOC!!!
+	 * Este metodo permite crear dispositivos vacios.
 	 */
 	public Dispositivo() {
 		modelo = "";
@@ -34,13 +34,12 @@ public abstract class Dispositivo {
 		descuento = "";
 	}
 
-    /**
-	 * Este es un metodo constructor de 5 parametros con las caracteristicas de dispositivo.
-	 * @param modeloDispositvo modelo dispositivo.
-	 * @param marcaDispositvo marca dispositivo.
-	 * @param precioDispositvo precio dispositivo.
-	 * @param descuentoDispositvo descuento dispositivo.
-     * @param precioTotal precio total del dispositivo.
+	/**
+	 * Este es un metodo constructor de 4 parametros con las caracteristicas de dispositivo.
+	 * @param modelo modelo del dispositivo.
+	 * @param marca marca del dispositivo.
+	 * @param precio precio del dispositivo.
+	 * @param descuento descuento del dispositivo.
 	 */
     public Dispositivo(String modelo, String marca, String precio, String descuento) {
 		this.modelo = modelo;
@@ -136,7 +135,7 @@ public abstract class Dispositivo {
 	}
 	
 
-    /**
+	/**
 	 * Devuelve el precioTotal. 
 	 * @return precioTotal. 
 	 */
@@ -145,7 +144,7 @@ public abstract class Dispositivo {
 	}
 
 	/**
-	 * Este metodo devuelve ordenadamente todas las caracteristicas  en formato CSV.
+	 * Este metodo devuelve ordenadamente todas las caracteristicas en formato CSV.
 	 * @return todas las caracteristicas separadas por comas.
 	 */
 	public abstract String toCSV();

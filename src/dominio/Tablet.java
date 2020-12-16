@@ -14,15 +14,21 @@ package dominio;
 
 /**
  *
- *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas de las tablets
+ *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas de las tablets.
  *
  */
 public class Tablet extends Dispositivo {
     private double capacidadBateria;
     private double camaraPixel;
 
-    /**
-	 * JAVADOC!!!
+	/**
+	 * Este es un metodo constructor que hereda 4 parametros de su clase padre y contiene 2 parametros propios de sus caracteristicas.
+	 * @param modelo modelo dispositivo.
+         * @param marca marca dispositivo.
+         * @param precio precio dispositivo.
+         * @param descuento descuento dispositivo.
+	 * @param capacidadBateria capacidad de la bateria.
+	 * @param camaraPixel pixeles de la camara.  
 	 */
     public Tablet(String modelo, String marca, String precio, String descuento, String capacidadBateria, String camaraPixel) {
         super(modelo, marca, precio, descuento);
@@ -30,8 +36,9 @@ public class Tablet extends Dispositivo {
         this.camaraPixel = Double.parseDouble(camaraPixel);
     }
 
-    /**
-	 * JAVADOC!!!
+	/**
+	 * Este es un metodo sobre-escrito, heredado de la clase padre, que devuelve todas las caracteriscas en formato CSV.
+	 * @return todas las caracteristicas separadas por comas. 
 	 */
     @Override
     public String toCSV() {
@@ -39,8 +46,9 @@ public class Tablet extends Dispositivo {
                     + capacidadBateria + "," + camaraPixel + "\n";
     }
 
-    /**
-	 * JAVADOC!!!
+	/**
+	 * Este es un metodo sobre-escrito, heredado de la clase padre, que devuelve ordenadamente todas las caracteristicas.
+	 * @return todas las caracteristicas.
 	 */
     @Override
     public String toString() {
