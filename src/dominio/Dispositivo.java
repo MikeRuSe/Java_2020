@@ -11,13 +11,15 @@ Copyright 2020 Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibet
         limitations under the License.
  */
 package dominio;
+
 /**
  *
  *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas de los dispositivos (Clase Padre).
  *
  */
 public abstract class Dispositivo {
-    
+
+    //Si se quiere acceder a ellos desde las clases hijo con getters en vez de private se pone protected.
     private String modelo;
 	private String marca;
 	private String precio; 

@@ -10,6 +10,7 @@ Copyright 2020 Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibet
         See the License for the specific language governing permissions and
         limitations under the License.
  */
+
 package dominio;
 
 /**
@@ -26,7 +27,6 @@ public class Telefono extends Dispositivo {
 	 * @param precio precio del dispositivo.
 	 * @param descuento descuento del dispositivo.
 	 */
-
 	public Telefono(String modelo, String marca, String precio, String descuento) {
 		super(modelo, marca, precio, descuento);
 	}
@@ -34,7 +34,6 @@ public class Telefono extends Dispositivo {
 	/**
 	 * Este es un metodo constructor sin parametros que llama a la clase padre.
 	 */
-
 	public Telefono() {
 		super();
 	}
@@ -43,7 +42,6 @@ public class Telefono extends Dispositivo {
 	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV.
 	 * @return todas las caracteristicas separadas por comas.
 	 */
-
 	public String toCSV() {
 		return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + "\n";
 	}

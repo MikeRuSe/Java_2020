@@ -18,6 +18,8 @@ package dominio;
  *
  */
 public class Tablet extends Dispositivo {
+
+    //Variables que solo tiene Tablet
     private double capacidadBateria;
     private double camaraPixel;
 
