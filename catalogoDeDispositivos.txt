@@ -9,8 +9,8 @@ S-Galaxy_J5 Samsung 550 9 500.5
 S-Iphone_11_PLUS Apple 799 15 679.15
 S-Iphone_SE_3 Apple 499 12 439.12
 S-Iphone_SE_4 Apple 499 12 439.12
-T-Tablet_100 Xioami 500.0 10.0 450.0 3000.0 21.0
-T-Tablet_200 Xioami 600.0 10.0 540.0 5000.0 21.0
-T-Tablet_300 Xioami 700.0 10.0 630.0 7000.0 21.0
-T-Tablet_400 Xioami 750.0 10.0 675.0 10000.0 21.0
 S-Iphone_SE3_4 Apple 299 40 179.4
+T-Tablet_B Xiosami 5300.0 10.0 4300.0 10.0 4770.0
+T-Tablet_A Xiosami 5300.0 10.0 4300.0 10.0 4770.0
+O-Tablet_A Xiosami 5300.0 10.0 16.0 Intel5 4770.0
+O-Tablet_B Xiosami 5300.0 10.0 16.0 Intel5 4770.0

@@ -1,0 +1,46 @@
+package dominio;
+
+/**
+ *
+ *Esta clase contiene atributos y metodos que sirven para crear las caracteristicas de los ordenadores.
+ *
+ */
+public class Ordenador extends Dispositivo {
+    private double RAM;
+    private String CPU;
+    
+    /**
+	 * Este es un metodo constructor que hereda 4 parametros de su clase padre y contiene 2 parametros propios de sus caracteristicas.
+	 * @param modelo modelo dispositivo.
+	 * @param marca marca dispositivo.
+	 * @param precio precio dispositivo.
+	 * @param descuento descuento dispositivo.
+	 * @param RAM numero de gigas de ram del dispositivo.
+	 * @param CPU tipo de procesador del dispositivo.
+	 */
+    public Ordenador(String modelo, String marca, String precio, String descuento, String RAM, String CPU) {
+        super(modelo, marca, precio, descuento);
+        this.RAM = Double.parseDouble(RAM);
+        this.CPU = CPU;
+    }
+
+    /**
+	 * Este es un metodo sobre-escrito, heredado de la clase padre, que devuelve todas las caracteriscas en formato CSV.
+	 * @return todas las caracteristicas separadas por comas. 
+	 */
+    @Override
+    public String toCSV() {
+        return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + ","
+                    + RAM + "," + CPU + "," + getPrecioTotal() + "\n";
+    }
+
+	/**
+	 * Este es un metodo sobre-escrito, heredado de la clase padre, que devuelve ordenadamente todas las caracteristicas.
+	 * @return todas las caracteristicas.
+	 */
+    @Override
+    public String toString() {
+        return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " "
+                    + RAM + " " + CPU + " " + getPrecioTotal() + "\n";
+    }
+}
