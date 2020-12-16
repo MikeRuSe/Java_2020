@@ -21,10 +21,10 @@ public abstract class Dispositivo {
     private double precioTotal;
 
 	public Dispositivo() {
-		modelo      = "";
-		marca       = "";
-		precio      = "";
-		descuento   = "";
+		modelo = "";
+		marca = "";
+		precio = "";
+		descuento = "";
 	}
 
     /**
@@ -37,11 +37,11 @@ public abstract class Dispositivo {
 	 */
     
     public Dispositivo(String modelo, String marca, String precio, String descuento) {
-		this.modelo     = modelo;
-		this.marca      = marca;
-		this.precio     = precio;
-		this.descuento  = descuento;
-        precioTotal     = precioFinal(precio, descuento);
+		this.modelo = modelo;
+		this.marca = marca;
+		this.precio = precio;
+		this.descuento = descuento;
+        precioTotal = precioFinal(precio, descuento);
 	}
 
 	/**

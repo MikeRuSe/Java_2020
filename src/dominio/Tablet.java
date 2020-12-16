@@ -19,7 +19,7 @@ public class Tablet extends Dispositivo {
     public Tablet(String modelo, String marca, String precio, String descuento, String capacidadBateria, String camaraPixel) {
         super(modelo, marca, precio, descuento);
         this.capacidadBateria = Double.parseDouble(capacidadBateria);
-        this.camaraPixel      = Double.parseDouble(camaraPixel);
+        this.camaraPixel = Double.parseDouble(camaraPixel);
     }
 
     @Override

@@ -25,16 +25,18 @@ import java.io.FileWriter;
  */
 public class Interfaz {
 	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> " +
-								 "\n\n-Listar telefonos:" + "\n   java -cp bin aplicacion.Principal list" +
+								 "\n\n-Insertar tablets:" + "\n   java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Listar dispositivos:" + "\n   java -cp bin aplicacion.Principal list" +
 								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>" +
-								 "\n\n-Borrar telefonos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
-								 "\n\n-Exportar catalogo a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
+								 "\n\n-Modificar tablets:" + "\n   java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Borrar dispositivos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
+								 "\n\n-Exportar catalogo de dispositivos a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
 								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";
 	private static String NOMBRE_FICHERO = "catalogoDeDispositivos.txt";
 	private static String NOMBRE_CSV = "catalogoDeDispositivos.csv";
 
-	private static int ATRIBUTOS_TELEFONO	= 4;
-	private static int ATRIBUTOS_TABLET		= 6;
+	private static int ATRIBUTOS_TELEFONO = 4;
+	private static int ATRIBUTOS_TABLET	= 6;
 	
 	/**
 	 * Este método procesa los datos según el usuario lo haya especificado
@@ -48,7 +50,7 @@ public class Interfaz {
 			System.err.println("ERROR: 'No hay suficientes parametros.'");
 			System.exit(128);
 		} else {
-			if (args[0].equals("help")) {
+			if (args[0].equals("help")) { /* --------- AYUDA --------- */
 				System.out.println(HELP);
 			} else if (args[0].equals("list")) {
 				if(catalogo.toString().equals("")) {
@@ -56,7 +58,7 @@ public class Interfaz {
 				} else {
 					System.out.println(catalogo);
 				}
-			} else if (args[0].equals("add")) {
+			} else if (args[0].equals("add")) { /* --------- AÑADIR --------- */
 				if (args.length > 2) {
 					String modelo = args[1];
 
@@ -101,7 +103,7 @@ public class Interfaz {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
 				}
-			} else if (args[0].equals("modify")) {  /* --------- MODIFY --------- */
+			} else if (args[0].equals("modify")) {  /* --------- MODIFICAR --------- */
 				if (args.length > 3) {
 					String modelo = args[1];
 
@@ -153,7 +155,7 @@ public class Interfaz {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
 				}
-			} else if (args[0].equals("csv")) {
+			} else if (args[0].equals("csv")) { /* --------- CSV --------- */
 				if (args.length < 1) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);
@@ -168,7 +170,7 @@ public class Interfaz {
 					generarCSV(catalogo);
 					System.err.println("Se ha generado el fichero '" + NOMBRE_CSV +"'");
 				}
-			} else if (args[0].equals("remove")) {
+			} else if (args[0].equals("remove")) { /* --------- BORRAR --------- */
 				if (args.length < 2) {
 					System.err.println("ERROR: 'No hay suficientes parametros.'");
 					System.exit(128);

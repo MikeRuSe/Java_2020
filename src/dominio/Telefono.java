@@ -18,7 +18,7 @@ package dominio;
  *
  */
 
-public class Telefono extends Dispositivo{
+public class Telefono extends Dispositivo {
 
 	public Telefono(String modelo, String marca, String precio, String descuento) {
 		super(modelo, marca, precio, descuento);

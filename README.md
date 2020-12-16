@@ -1,7 +1,7 @@
 # Proyecto 1: gestor de catálogo de productos
 
 ## Descripción
-Programa que permite el alta, baja y modificación de productos (en este caso dispositivos móviles).
+Programa que permite el alta, baja y modificación de productos (en este caso dispositivos).
 
 Es capaz de obtener el precio base y aplicarle el descuento introducido de forma automática.
 
@@ -43,7 +43,11 @@ make compilar
 ```BASH
 java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento>
 ```
-#### Listar teléfonos ####
+#### Añadir tablets ####
+```BASH
+java -cp bin aplicacion.Principal add <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+```
+#### Listar dispositivos ####
 ```BASH
 java -cp bin aplicacion.Principal list
 ```
@@ -51,11 +55,15 @@ java -cp bin aplicacion.Principal list
 ```BASH
 java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento>
 ```
-#### Borrar teléfonos ####
+#### Modificar tablets ####
+```BASH
+java -cp bin aplicacion.Principal modify <Modelo_modificar> <Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+```
+#### Borrar dispositivos ####
 ```BASH
 java -cp bin aplicacion.Principal remove <Modelo_borrar>
 ```
-#### Exportar el catalogo a CSV ####
+#### Exportar el catalogo de dispositivos a CSV ####
 ```BASH
 java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>
 ```
