@@ -20,7 +20,6 @@ import java.lang.StringBuilder;
  * Esta clase crea las ArrayList con los Strings de Dispositivo.java
  *
  */
-
 public class Catalogo {
 	private ArrayList<Dispositivo> coleccionDispositivos = new ArrayList<>();
 
@@ -29,7 +28,6 @@ public class Catalogo {
 	*
 	* @param dispositivo nuevo en el catálogo.add
 	*/
-
 	public void annadirDispositivo(Dispositivo dispositivo) {
 		coleccionDispositivos.add(dispositivo);
 	}
@@ -39,7 +37,6 @@ public class Catalogo {
 	*
 	* @param argumentos eliminado del catálogo
 	*/
-
 	public void eliminarDispositivo(String argumentos) {
 		for (int i = 0 ; i < coleccionDispositivos.size(); i++) {
         	Dispositivo nuevoDispositivo = coleccionDispositivos.get(i);
@@ -55,7 +52,6 @@ public class Catalogo {
 	* @param dispositivo modificado del catálogo
 	* @param argumentos argumentos para realizar la búsqueda en la ArrayList
 	*/
-
 	public void modificarDispositivo(Dispositivo dispositivo, String argumentos) {
 		for (int i = 0 ; i < coleccionDispositivos.size(); i++) {
         	Dispositivo nuevoDispositivo = coleccionDispositivos.get(i);
@@ -71,7 +67,6 @@ public class Catalogo {
 	* @param modelo modelo del dispositivo.
 	* @return true/false dependiendo si existe o no.
 	*/
-
 	public boolean revisarModelo(String modelo) {
 		for (int y = 0 ; y < coleccionDispositivos.size(); y++) {
         	Dispositivo nuevoDispositivo = coleccionDispositivos.get(y);
@@ -87,7 +82,6 @@ public class Catalogo {
 	*
 	* @return datos del catálogo en CSV
 	*/
-
 	public String toCSV() {
 		StringBuilder datos = new StringBuilder();
 		for (Dispositivo dispositivo : coleccionDispositivos){
@@ -101,7 +95,6 @@ public class Catalogo {
 	*
 	* @return datos del catálogo
 	*/
-
 	public String toString() {
 		StringBuilder datos = new StringBuilder();
 		for (Dispositivo dispositivo : coleccionDispositivos) {

@@ -17,13 +17,18 @@ package dominio;
  *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas del telefono
  *
  */
-
 public class Telefono extends Dispositivo {
 
+	/**
+	 * JAVADOC!!!
+	 */
 	public Telefono(String modelo, String marca, String precio, String descuento) {
 		super(modelo, marca, precio, descuento);
 	}
 
+	/**
+	 * JAVADOC!!!
+	 */
 	public Telefono() {
 		super();
 	}
@@ -32,7 +37,6 @@ public class Telefono extends Dispositivo {
 	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV
 	 * @return todas las caracteristicas separadas por comas
 	 */
-
 	public String toCSV() {
 		return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + "\n";
 	}
@@ -41,7 +45,6 @@ public class Telefono extends Dispositivo {
 	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono
 	 * @return todas las caracteristicas
 	 */
- 
 	public String toString() {
 		return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " " + getPrecioTotal() + "\n";
 	}

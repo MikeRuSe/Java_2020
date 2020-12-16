@@ -12,22 +12,36 @@ Copyright 2020 Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibet
  */
 package dominio;
 
+/**
+ *
+ *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas de las tablets
+ *
+ */
 public class Tablet extends Dispositivo {
     private double capacidadBateria;
     private double camaraPixel;
 
+    /**
+	 * JAVADOC!!!
+	 */
     public Tablet(String modelo, String marca, String precio, String descuento, String capacidadBateria, String camaraPixel) {
         super(modelo, marca, precio, descuento);
         this.capacidadBateria = Double.parseDouble(capacidadBateria);
         this.camaraPixel = Double.parseDouble(camaraPixel);
     }
 
+    /**
+	 * JAVADOC!!!
+	 */
     @Override
     public String toCSV() {
         return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + ","
                     + capacidadBateria + "," + camaraPixel + "\n";
     }
 
+    /**
+	 * JAVADOC!!!
+	 */
     @Override
     public String toString() {
         return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " " + getPrecioTotal() + " "

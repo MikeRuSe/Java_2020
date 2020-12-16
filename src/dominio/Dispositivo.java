@@ -11,7 +11,11 @@ Copyright 2020 Jorge Martin-Benito Garcia, Xavier Alexander Mora Peraza, Dulibet
         limitations under the License.
  */
 package dominio;
-
+/**
+ *
+ *Esta clase contiene atributos y metodos que sirven  para crear las caracteristicas de los dispositivos (Clase Padre).
+ *
+ */
 public abstract class Dispositivo {
     // Protected 
     private String modelo;
@@ -20,6 +24,9 @@ public abstract class Dispositivo {
 	private String descuento;
     private double precioTotal;
 
+	/**
+	 * JAVADOC!!!
+	 */
 	public Dispositivo() {
 		modelo = "";
 		marca = "";
@@ -35,7 +42,6 @@ public abstract class Dispositivo {
 	 * @param descuentoDispositvo descuento dispositivo.
      * @param precioTotal precio total del dispositivo.
 	 */
-    
     public Dispositivo(String modelo, String marca, String precio, String descuento) {
 		this.modelo = modelo;
 		this.marca = marca;
@@ -48,7 +54,6 @@ public abstract class Dispositivo {
 	 * Devuelve el modelo. 
 	 * @return modelo. 
 	 */
-
 	public String getModelo() {
 		return modelo;
 	}
@@ -57,7 +62,6 @@ public abstract class Dispositivo {
 	 * Cambia el modelo. 
 	 * @param modelo nuevo modelo.  
 	 */
-
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
@@ -66,7 +70,6 @@ public abstract class Dispositivo {
 	 * Devuelve la marca. 
 	 * @return marca. 
 	 */
-
 	public String getMarca() {
 		return marca;
 	}
@@ -75,7 +78,6 @@ public abstract class Dispositivo {
 	 * Cambia la marca. 
 	 * @param marca nueva marca.  
 	 */
-
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
@@ -84,7 +86,6 @@ public abstract class Dispositivo {
 	 * Devuelve el precio. 
 	 * @return precio. 
 	 */
-
 	public String getPrecio() {
 		return precio; 
 	}
@@ -93,7 +94,6 @@ public abstract class Dispositivo {
 	 * Cambia precio. 
 	 * @param precio nuevo precio. 
 	 */
-
 	public void setPrecio(String precio) {
 		this.precio = precio;
 	}
@@ -102,7 +102,6 @@ public abstract class Dispositivo {
 	 * Devuelve el descuento. 
 	 * @return descuento. 
 	 */
-
 	public String getDescuento() {
 		return descuento; 
 	}
@@ -111,7 +110,6 @@ public abstract class Dispositivo {
 	 * Aplica el descuento. 
 	 * @param descuento aplica el descuento.
 	 */
-
 	public void setDescuento(String descuento) {
 		this.descuento = descuento; 
 	}
@@ -122,7 +120,6 @@ public abstract class Dispositivo {
 	 * @param descuento descuento a aplicar.
  	 * @return precio final con o sin descuento.
  	*/
-
 	public double precioFinal(String precio, String descuento) {
 		if (descuento == null || descuento.isEmpty()) {
 			return Double.parseDouble(precio);
@@ -143,7 +140,6 @@ public abstract class Dispositivo {
 	 * Devuelve el precioTotal. 
 	 * @return precioTotal. 
 	 */
-
 	public double getPrecioTotal() {
 		return precioTotal; 
 	}
@@ -152,13 +148,11 @@ public abstract class Dispositivo {
 	 * Este metodo devuelve ordenadamente todas las caracteristicas  en formato CSV.
 	 * @return todas las caracteristicas separadas por comas.
 	 */
-
 	public abstract String toCSV();
 
 	/**
 	 * Este metodo devuelve ordenadamente todas las caracteristicas. 
 	 * @return todas las caracteristicas.
 	 */
-
 	public abstract String toString();
 }
