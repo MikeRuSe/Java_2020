@@ -26,9 +26,11 @@ import java.io.FileWriter;
 public class Interfaz {
 	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add S-<Nuevo_modelo> <Marca> <precio> <descuento> " +
 								 "\n\n-Insertar tablets:" + "\n   java -cp bin aplicacion.Principal add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Insertar ordenadores:" + "\n   java -cp bin aplicacion.Principal add O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
 								 "\n\n-Listar dispositivos:" + "\n   java -cp bin aplicacion.Principal list" +
 								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>" +
 								 "\n\n-Modificar tablets:" + "\n   java -cp bin aplicacion.Principal modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Modificar ordenadores:" + "\n   java -cp bin aplicacion.Principal modify O-<Modelo_modificar> O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
 								 "\n\n-Borrar dispositivos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
 								 "\n\n-Exportar catalogo de dispositivos a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
 								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";
@@ -37,6 +39,7 @@ public class Interfaz {
 
 	private static int ATRIBUTOS_TELEFONO = 4;
 	private static int ATRIBUTOS_TABLET	= 6;
+	private static int ATRIBUTOS_ORDENADOR	= 6;
 	
 	/**
 	 * Este método procesa los datos según el usuario lo haya especificado.
@@ -70,7 +73,6 @@ public class Interfaz {
 								if (args.length < ATRIBUTOS_TELEFONO + 1) {
 									System.err.println("ERROR: 'No hay suficientes parametros.'");
 									System.exit(128);
-									break;
 								} else if (args.length > ATRIBUTOS_TELEFONO + 1 ) {
 									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 									System.exit(126);
@@ -81,12 +83,21 @@ public class Interfaz {
 								if (args.length < ATRIBUTOS_TABLET + 1) {
 									System.err.println("ERROR: 'No hay suficientes parametros.'");
 									System.exit(128);
-									break;
 								} else if (args.length > ATRIBUTOS_TABLET + 1 ) {
 									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 									System.exit(126);
 								}
 								nuevoDispositivo = new Tablet(modelo, args[2], args[3], args[4], args[5], args[6]);
+								break;
+							case 'O':
+								if (args.length < ATRIBUTOS_ORDENADOR + 1) {
+									System.err.println("ERROR: 'No hay suficientes parametros.'");
+									System.exit(128);
+								} else if (args.length > ATRIBUTOS_ORDENADOR + 1 ) {
+									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
+									System.exit(126);
+								}
+								nuevoDispositivo = new Ordenador(modelo, args[2], args[3], args[4], args[5], args[6]);
 								break;
 							default: 
 								System.err.println("ERROR: 'Se han introducido parametros no validos.'");
@@ -120,7 +131,6 @@ public class Interfaz {
 								if (args.length < ATRIBUTOS_TELEFONO + 2) {
 									System.err.println("ERROR: 'No hay suficientes parametros.'");
 									System.exit(128);
-									break;
 								} else if (args.length > ATRIBUTOS_TELEFONO + 2) {
 									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 									System.exit(126);
@@ -131,12 +141,21 @@ public class Interfaz {
 								if (args.length < ATRIBUTOS_TABLET + 2) {
 									System.err.println("ERROR: 'No hay suficientes parametros.'");
 									System.exit(128);
-									break;
 								} else if (args.length > ATRIBUTOS_TABLET + 2) {
 									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
 									System.exit(126);
 								}
 								dispositivoToModify = new Tablet(args[2], args[3], args[4], args[5], args[6], args[7]);
+								break;
+							case 'O':
+								if (args.length < ATRIBUTOS_ORDENADOR + 2) {
+									System.err.println("ERROR: 'No hay suficientes parametros.'");
+									System.exit(128);
+								} else if (args.length > ATRIBUTOS_ORDENADOR + 2) {
+									System.err.println("ERROR: 'Se han introducido demasiados parametros.'");
+									System.exit(126);
+								}
+								dispositivoToModify = new Ordenador(args[2], args[3], args[4], args[5], args[6], args[7]);
 								break;
 							default:
 								System.err.println("ERROR: 'Se han introducido parametros no validos.'");
@@ -246,6 +265,10 @@ public class Interfaz {
 						break;
 					case 'T':
 						dispositivo = new Tablet(atributosDispositivo[0], atributosDispositivo[1], atributosDispositivo[2], atributosDispositivo[3],
+										atributosDispositivo[4], atributosDispositivo[5]);
+						break;
+					case 'O':
+						dispositivo = new Ordenador(atributosDispositivo[0], atributosDispositivo[1], atributosDispositivo[2], atributosDispositivo[3],
 										atributosDispositivo[4], atributosDispositivo[5]);
 						break;
 					default:
