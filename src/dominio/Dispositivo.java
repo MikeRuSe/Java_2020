@@ -17,7 +17,7 @@ package dominio;
  *
  */
 public abstract class Dispositivo {
-    // Protected 
+    
     private String modelo;
 	private String marca;
 	private String precio; 
