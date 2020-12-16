@@ -24,6 +24,10 @@ public class Telefono extends Dispositivo{
 		super(modelo, marca, precio, descuento);
 	}
 
+	public Telefono() {
+		super();
+	}
+
 	/**
 	 * Este metodo devuelve ordenadamente todas las caracteristicas del telefono en formato CSV
 	 * @return todas las caracteristicas separadas por comas

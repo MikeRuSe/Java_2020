@@ -16,21 +16,21 @@ public class Tablet extends Dispositivo {
     private double capacidadBateria;
     private double camaraPixel;
 
-    public Tablet(String modelo, String marca, String precio, String descuento, double capacidadBateria, double camaraPixel) {
+    public Tablet(String modelo, String marca, String precio, String descuento, String capacidadBateria, String camaraPixel) {
         super(modelo, marca, precio, descuento);
-        this.capacidadBateria = capacidadBateria;
-        this.camaraPixel      = camaraPixel;
+        this.capacidadBateria = Double.parseDouble(capacidadBateria);
+        this.camaraPixel      = Double.parseDouble(camaraPixel);
     }
 
     @Override
     public String toCSV() {
-        return  getModelo() + "," + getMarca() + "," + capacidadBateria + "," + camaraPixel + "," + getPrecio() + "," 
-                    + getDescuento() + "," + getPrecioTotal() + "\n";
+        return  getModelo() + "," + getMarca() + "," + getPrecio() + "," + getDescuento() + "," + getPrecioTotal() + ","
+                    + capacidadBateria + "," + camaraPixel + "\n";
     }
 
     @Override
     public String toString() {
-        return  getModelo() + " " + getMarca() + " " + capacidadBateria + " " + camaraPixel + " " + getPrecio() + " " 
-                    + getDescuento() + " " + getPrecioTotal() + "\n";
+        return  getModelo() + " " + getMarca() + " " + getPrecio() + " " + getDescuento() + " " + getPrecioTotal() + " "
+                    + capacidadBateria + " " + camaraPixel + "\n";
     }
 }
