@@ -36,6 +36,14 @@ cd final-project
 ```BASH
 make compilar
 ```
+##### Crear el ejecutable JAR: #####
+```BASH
+make jar
+```
+##### Exportar el catálogo de dispositivos a CSV: #####
+```BASH
+make csv
+```
 ### Diagrama del programa ###
 ![https://bitbucket.org/MigueLitros/final-project/src/master/img/catalogoDispositivos120.png](https://i.gyazo.com/7d25b435a112e4d77ee44f452c275bd6.png)
 ### Instrucciones de uso ###
@@ -43,33 +51,65 @@ make compilar
 ```BASH
 java -cp bin aplicacion.Principal add S-<Nuevo_modelo> <Marca> <precio> <descuento>
 ```
+o
+```BASH
+java -jar catalogoDispositivos.jar add S-<Nuevo_modelo> <Marca> <precio> <descuento>
+```
 #### Añadir tablets ####
 ```BASH
 java -cp bin aplicacion.Principal add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+```
+o
+```BASH
+java -jar catalogoDispositivos.jar add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
 ```
 #### Listar dispositivos ####
 ```BASH
 java -cp bin aplicacion.Principal list
 ```
+o
+```BASH
+java -jar catalogoDispositivos.jar list
+```
 #### Modificar teléfonos ####
 ```BASH
 java -cp bin aplicacion.Principal modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>
+```
+o
+```BASH
+java -jar catalogoDispositivos.jar modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>
 ```
 #### Modificar tablets ####
 ```BASH
 java -cp bin aplicacion.Principal modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
 ```
+o
+```BASH
+java -jar catalogoDispositivos.jar modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>
+```
 #### Borrar dispositivos ####
 ```BASH
 java -cp bin aplicacion.Principal remove (S-/T-)<Modelo_borrar>
+```
+o
+```BASH
+java -jar catalogoDispositivos.jar remove (S-/T-)<Modelo_borrar>
 ```
 #### Exportar el catalogo de dispositivos a CSV ####
 ```BASH
 java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>
 ```
+o
+```BASH
+java -jar catalogoDispositivos.jar csv <nombre_fichero(opcional)>
+```
 #### Mostrar cuadro de ayuda ####
 ```BASH
 java -cp bin aplicacion.Principal help
+```
+o
+```BASH
+java -jar catalogoDispositivos.jar help
 ```
 
 ### Desarrolladores ###
