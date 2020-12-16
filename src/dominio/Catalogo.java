@@ -17,72 +17,69 @@ import java.lang.StringBuilder;
 
 /**
  *
- * Esta clase crea las ArrayList con los Strings de Telefono.java
+ * Esta clase crea las ArrayList con los Strings de Dispositivo.java
  *
  */
 
 public class Catalogo {
-	private ArrayList<Telefono> coleccionTelefonos = new ArrayList<>();
+	private ArrayList<Dispositivo> coleccionDispositivos = new ArrayList<>();
 
 	/**
-	* Este metodo permite añadir un Telefono a la lista del catálogo,
+	* Este metodo permite añadir un Dispositivo a la lista del catálogo,
 	*
-	* @param telefono nuevo en el catálogo
+	* @param dispositivo nuevo en el catálogo.add
 	*/
 
-	public void annadirTelefono(Telefono telefono) {
-		coleccionTelefonos.add(telefono);
+	public void annadirDispositivo(Dispositivo dispositivo) {
+		coleccionDispositivos.add(dispositivo);
 	}
 
 	/**
-	* Este metodo permite eliminar un Telefono previamente añadido del la lista del catálogo,
+	* Este metodo permite eliminar un Dispositivo previamente añadido del la lista del catálogo,
 	*
 	* @param argumentos eliminado del catálogo
 	*/
 
-	public void eliminarTelefono(String argumentos) {
-		for(int i = 0 ; i < coleccionTelefonos.size(); i++) {
-        	Telefono nuevo_telefono = coleccionTelefonos.get(i);
-        	if(argumentos.equals(nuevo_telefono.getModeloTelefono()))  {
-        		coleccionTelefonos.remove(i);
+	public void eliminarDispositivo(String argumentos) {
+		for (int i = 0 ; i < coleccionDispositivos.size(); i++) {
+        	Dispositivo nuevoDispositivo = coleccionDispositivos.get(i);
+        	if(argumentos.equals(nuevoDispositivo.getModelo())) {
+        		coleccionDispositivos.remove(i);
         	}
     	}
 	}
 
 	/**
-	* Este metodo permite modificar un Telefono de la lista del catálogo,
+	* Este metodo permite modificar un Dispositivo de la lista del catálogo,
 	*
-	* @param telefono modificado del catálogo
+	* @param dispositivo modificado del catálogo
 	* @param argumentos argumentos para realizar la búsqueda en la ArrayList
 	*/
 
-	public void modificarTelefono(Telefono telefono, String argumentos) {
-		for(int i = 0 ; i < coleccionTelefonos.size(); i++) {
-        	Telefono nuevo_telefono = coleccionTelefonos.get(i);
-        	if(argumentos.equals(nuevo_telefono.getModeloTelefono()))  {
-        		coleccionTelefonos.set(i, telefono);
+	public void modificarDispositivo(Dispositivo dispositivo, String argumentos) {
+		for (int i = 0 ; i < coleccionDispositivos.size(); i++) {
+        	Dispositivo nuevoDispositivo = coleccionDispositivos.get(i);
+        	if(argumentos.equals(nuevoDispositivo.getModelo()))  {
+        		coleccionDispositivos.set(i, dispositivo);
         	}
     	}
     }
 
 	/**
-	* Este metodo permite verificar si el telefono que se va a añadir existe
+	* Este metodo permite verificar si el dispositivo que se va a añadir existe.
 	*
-	* @param modelo modelo del telefono
-	* @return true/false dependiendo si existe o no
+	* @param modelo modelo del dispositivo.
+	* @return true/false dependiendo si existe o no.
 	*/
 
-	public Boolean revisarModelo(String modelo) {
-		int A = 0;
-		for(int y = 0 ; y < coleccionTelefonos.size(); y++) {
-        	Telefono nuevo_telefono = coleccionTelefonos.get(y);
-        	if(modelo.equals(nuevo_telefono.getModeloTelefono())) {
-        		A = 1;
-        	} else {A = 0;}
+	public boolean revisarModelo(String modelo) {
+		for (int y = 0 ; y < coleccionDispositivos.size(); y++) {
+        	Dispositivo nuevoDispositivo = coleccionDispositivos.get(y);
+        	if (modelo.equals(nuevoDispositivo.getModelo())) {
+        		return true;
+			}
 		}
-		if(A == 1){
-			return true;
-		} else {return false;}
+		return false;
 	}
 	
 	/**
@@ -93,8 +90,8 @@ public class Catalogo {
 
 	public String toCSV() {
 		StringBuilder datos = new StringBuilder();
-		for (Telefono telefono : coleccionTelefonos){
-			datos.append(telefono.toCSV());
+		for (Dispositivo dispositivo : coleccionDispositivos){
+			datos.append(dispositivo.toCSV());
 		}
 		return datos.toString();
 	}
@@ -107,8 +104,8 @@ public class Catalogo {
 
 	public String toString() {
 		StringBuilder datos = new StringBuilder();
-		for (Telefono telefono : coleccionTelefonos) {
-			datos.append(telefono);
+		for (Dispositivo dispositivo : coleccionDispositivos) {
+			datos.append(dispositivo);
 		}
 		return datos.toString();
 	}
