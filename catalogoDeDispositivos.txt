@@ -1,0 +1,16 @@
+S-Galaxy_S10 Samsung 850 13 739.5
+S-Iphone_SE_1 Apple 799 5 759.05
+S-Iphone_10 Apple 1099 15 934.15
+S-Galaxy_T6 Samsung 150 7 139.5
+S-Galaxy_P5 Samsung 250 9 227.5
+S-Iphone_4 Apple 499 12 439.12
+S-Iphone_SE_4 Apple 499 12 439.12
+S-Galaxy_J5 Samsung 550 9 500.5
+S-Iphone_11_PLUS Apple 799 15 679.15
+S-Iphone_SE_3 Apple 499 12 439.12
+S-Iphone_SE_4 Apple 499 12 439.12
+T-Tablet_100 Xioami 500.0 10.0 3000.0 21.0 2370.0
+T-Tablet_200 Xioami 600.0 10.0 5000.0 21.0 3950.0
+T-Tablet_300 Xioami 700.0 10.0 7000.0 21.0 5530.0
+T-Tablet_400 Xioami 750.0 10.0 10000.0 21.0 7900.0
+S-Iphone_SE3_1 Apple 299 40 179.4
