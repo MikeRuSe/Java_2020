@@ -6,6 +6,8 @@ ejecutar:compilar
 limpiar:
 	rm -rf bin
 jar:compilar
-	jar cvfm catalogoTelefonos.jar Manifest.txt -C bin .
+	jar cvfm catalogoDispositivos.jar Manifest.txt -C bin .
 javadoc:compilar
 	find . -type f -name *.java | xargs javadoc -d html -encoding utf-8 -docencoding utf-8 -charset utf-8	
+csv:compilar
+	java -cp bin aplicacion.Principal csv
