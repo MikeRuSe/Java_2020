@@ -45,7 +45,7 @@ make jar
 make csv
 ```
 ### Diagrama del programa ###
-![https://bitbucket.org/MigueLitros/final-project/src/master/img/catalogoDispositivos120.png](https://i.gyazo.com/7d25b435a112e4d77ee44f452c275bd6.png)
+![https://bitbucket.org/MigueLitros/final-project/src/master/img/class%20diagram.png](https://i.gyazo.com/e13a937143e2390744840a13133d17f9.png)
 ### Instrucciones de uso ###
 #### Añadir teléfonos ####
 ```BASH
