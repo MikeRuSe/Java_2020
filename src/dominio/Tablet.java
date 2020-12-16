@@ -24,9 +24,9 @@ public class Tablet extends Dispositivo {
 	/**
 	 * Este es un metodo constructor que hereda 4 parametros de su clase padre y contiene 2 parametros propios de sus caracteristicas.
 	 * @param modelo modelo dispositivo.
-         * @param marca marca dispositivo.
-         * @param precio precio dispositivo.
-         * @param descuento descuento dispositivo.
+	 * @param marca marca dispositivo.
+	 * @param precio precio dispositivo.
+	 * @param descuento descuento dispositivo.
 	 * @param capacidadBateria capacidad de la bateria.
 	 * @param camaraPixel pixeles de la camara.  
 	 */

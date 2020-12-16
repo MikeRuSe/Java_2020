@@ -22,9 +22,9 @@ public class Telefono extends Dispositivo {
 	/**
 	 * Este es un metodo constructor que hereda los parametros de su clase padre.
 	 * @param modelo modelo del dispositivo.
-         * @param marca marca del dispositivo.
-         * @param precio precio del dispositivo.
-         * @param descuento descuento del dispositivo.
+	 * @param marca marca del dispositivo.
+	 * @param precio precio del dispositivo.
+	 * @param descuento descuento del dispositivo.
 	 */
 
 	public Telefono(String modelo, String marca, String precio, String descuento) {
