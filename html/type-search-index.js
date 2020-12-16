@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"dominio","l":"Catalogo"},{"p":"dominio","l":"Dispositivo"},{"p":"interfaz","l":"Interfaz"},{"p":"aplicacion","l":"Principal"},{"p":"dominio","l":"Tablet"},{"p":"dominio","l":"Telefono"}]
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"dominio","l":"Catalogo"},{"p":"dominio","l":"Dispositivo"},{"p":"interfaz","l":"Interfaz"},{"p":"dominio","l":"Ordenador"},{"p":"aplicacion","l":"Principal"},{"p":"dominio","l":"Tablet"},{"p":"dominio","l":"Telefono"}]
