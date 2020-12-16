@@ -23,7 +23,7 @@ import interfaz.Interfaz;
  * @author Dulibeth Medina Chirinos
  * @author Miguel Rubio Semelas
  * 
- * @version 1.3.0.121420
+ * @version 1.4.0.121620
  */
 public class Principal {
 
