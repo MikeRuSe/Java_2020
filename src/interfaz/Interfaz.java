@@ -102,13 +102,18 @@ public class Interfaz {
 					System.exit(128);
 				}
 			} else if (args[0].equals("modify")) {  /* --------- MODIFY --------- */
-				if (args.length > 2) {
+				if (args.length > 3) {
 					String modelo = args[1];
 
 					if (catalogo.revisarModelo(modelo) == true) {
 						Dispositivo dispositivoToModify = new Telefono(); // Inicializamos a un Telefono vacio.
 
-						switch(modelo.charAt(0)) {
+						if (modelo.charAt(0) != args[2].charAt(0)) {
+							System.err.println("ERROR: 'No se permite el cambio de tipo de dispositvo. Cree un dispositivo nuevo con add.'");
+							System.exit(126);
+						}
+
+						switch(modelo.charAt(0)) {	// Utilizar args[2].chartAt(0) para permitir el cambio de tipo de dispositivo.
 							case 'S':
 								if (args.length < ATRIBUTOS_TELEFONO + 2) {
 									System.err.println("ERROR: 'No hay suficientes parametros.'");
@@ -230,8 +235,6 @@ public class Interfaz {
 				if (atributosDispositivo.length < 4) {  // Comprobamos el número minimo de atributos.
 					continue;	// Se salta un ciclo del while.
 				}
-
-				System.out.println("DEBUG LINE: " + atributosDispositivo);
 
 				Dispositivo dispositivo;
 
