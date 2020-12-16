@@ -24,16 +24,16 @@ import java.io.FileWriter;
  *
  */
 public class Interfaz {
-	private static String HELP = "\n-Insertar telefonos:" + "\n   java -cp bin aplicacion.Principal add S-<Nuevo_modelo> <Marca> <precio> <descuento> " +
-								 "\n\n-Insertar tablets:" + "\n   java -cp bin aplicacion.Principal add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
-								 "\n\n-Insertar ordenadores:" + "\n   java -cp bin aplicacion.Principal add O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
-								 "\n\n-Listar dispositivos:" + "\n   java -cp bin aplicacion.Principal list" +
-								 "\n\n-Modificar telefonos:" + "\n   java -cp bin aplicacion.Principal modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>" +
-								 "\n\n-Modificar tablets:" + "\n   java -cp bin aplicacion.Principal modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
-								 "\n\n-Modificar ordenadores:" + "\n   java -cp bin aplicacion.Principal modify O-<Modelo_modificar> O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
-								 "\n\n-Borrar dispositivos:" + "\n   java -cp bin aplicacion.Principal remove <Modelo_borrar>" +
-								 "\n\n-Exportar catalogo de dispositivos a CSV:" + "\n   java -cp bin aplicacion.Principal csv <nombre_fichero(opcional)>" +
-								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -cp bin aplicacion.Principal help";
+	private static String HELP = "\n-Insertar telefonos:" + "\n   java -jar catalogoDispositivos.jar add S-<Nuevo_modelo> <Marca> <precio> <descuento> " +
+								 "\n\n-Insertar tablets:" + "\n   java -jar catalogoDispositivos.jar add T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Insertar ordenadores:" + "\n   java -jar catalogoDispositivos.jar add O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
+								 "\n\n-Listar dispositivos:" + "\n   java -jar catalogoDispositivos.jar list" +
+								 "\n\n-Modificar telefonos:" + "\n   java -jar catalogoDispositivos.jar modify S-<Modelo_modificar> S-<Nuevo_modelo> <Marca> <precio> <descuento>" +
+								 "\n\n-Modificar tablets:" + "\n   java -jar catalogoDispositivos.jar modify T-<Modelo_modificar> T-<Nuevo_modelo> <Marca> <precio> <descuento> <bateria> <camaraPixel>" +
+								 "\n\n-Modificar ordenadores:" + "\n   java -jar catalogoDispositivos.jar modify O-<Modelo_modificar> O-<Nuevo_modelo> <Marca> <precio> <descuento> <RAM> <CPU>" +
+								 "\n\n-Borrar dispositivos:" + "\n   java -jar catalogoDispositivos.jar remove <Modelo_borrar>" +
+								 "\n\n-Exportar catalogo de dispositivos a CSV:" + "\n   java -jar catalogoDispositivos.jar csv <nombre_fichero(opcional)>" +
+								 "\n\n-Mostrar este cuadro de ayuda:" + "\n   java -jar catalogoDispositivos.jar help";
 	private static String NOMBRE_FICHERO = "catalogoDeDispositivos.txt";
 	private static String NOMBRE_CSV = "catalogoDeDispositivos.csv";
 
